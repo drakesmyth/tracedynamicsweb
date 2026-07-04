@@ -1,0 +1,11 @@
+.nuxt
+.output
+.vercel
+.nitro
+node_modules
+dist
+coverage
+.data
+.env
+.env.*
+!.env.example

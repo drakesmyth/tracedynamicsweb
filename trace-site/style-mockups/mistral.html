@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TRACE — style mock: Mistral-ish</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf6; --ink:#0c1130; --muted:#5a607e;
+    --blue:#2b34e0; --violet:#7a4ff0; --cyan:#19b6e6; --tint:#eef0ff;
+    --line:#e7e6df; --radius:16px;
+    --grad:linear-gradient(125deg,#2b34e0 0%,#5b3df0 45%,#19b6e6 100%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.brand{font-family:"Space Grotesk",sans-serif;letter-spacing:-.02em;line-height:1.05}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  .btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;transition:.15s}
+  .btn-primary{background:var(--ink);color:#fff}
+  .btn-primary:hover{transform:translateY(-1px)}
+  .btn-ghost{background:#fff;border:1.5px solid var(--ink)}
+  .btn-light{background:#fff;color:var(--ink)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(251,250,246,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-weight:700;font-size:24px;letter-spacing:.04em}
+  .nav-links{display:flex;gap:30px;font-size:15px;color:var(--muted);font-weight:500}
+  .nav-links a:hover{color:var(--ink)}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  /* hero */
+  .hero{background:var(--grad);color:#fff;border-radius:var(--radius);margin-top:22px;padding:74px 56px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.10)}
+  .eyebrow{font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;opacity:.9;margin-bottom:20px}
+  .hero h1{font-size:60px;font-weight:700;max-width:14ch}
+  .hero p{font-size:20px;max-width:54ch;margin:24px 0 34px;opacity:.95}
+  .hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+  @media(max-width:760px){.hero{padding:48px 26px}.hero h1{font-size:40px}}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:26px 0}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .stat b{font-family:"Space Grotesk";font-size:30px;display:block;letter-spacing:-.02em}
+  .stat span{color:var(--muted);font-size:14px}
+  @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  section{padding:74px 0}
+  .kicker{color:var(--blue);font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px}
+  h2{font-size:40px;font-weight:700;max-width:18ch}
+  .lead{font-size:19px;color:var(--muted);max-width:60ch;margin-top:18px}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .card .n{font-family:"Space Grotesk";color:var(--blue);font-weight:700;font-size:15px}
+  .card h3{font-size:20px;margin:12px 0 8px}
+  .card p{color:var(--muted);font-size:15px}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+  .panel{border-radius:var(--radius);padding:36px}
+  .panel.dark{background:var(--ink);color:#fff}
+  .panel.tint{background:var(--tint)}
+  .panel h3{font-size:26px;margin-bottom:10px}
+  .panel p{font-size:16px;opacity:.92;margin-bottom:22px}
+  @media(max-width:760px){.split{grid-template-columns:1fr}}
+
+  .photo{width:100%;border-radius:var(--radius);display:block;margin-top:8px;border:1px solid var(--line)}
+  .well{background:var(--grad);color:#fff;border-radius:var(--radius);padding:60px 48px;text-align:center}
+  .well h2{margin:0 auto;max-width:22ch}
+  .well p{max-width:54ch;margin:18px auto 30px;opacity:.95;font-size:18px}
+
+  footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-size:14px}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  .tag{position:fixed;left:14px;bottom:14px;background:var(--ink);color:#fff;font-size:12px;padding:7px 12px;border-radius:999px;font-family:"Space Grotesk";z-index:50}
+</style>
+</head>
+<body>
+<div class="tag">DRAFT · Mistral-ish · internal preview, not final</div>
+<nav><div class="wrap nav">
+  <div class="brand">TRACE</div>
+  <div class="nav-links"><a>The data</a><a>The WELL</a><a>Contributors</a><a>Researchers</a></div>
+  <a class="btn btn-primary" style="padding:9px 18px">Join</a>
+</div></nav>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">The missing data layer for embodied AI</div>
+    <h1>Robots that work with people need human data.</h1>
+    <p>TRACE records how people actually move, work, and cooperate in real spaces — the in-the-wild data the next generation of robots needs and no one can scrape.</p>
+    <div class="btns">
+      <a class="btn btn-light">Become a contributor</a>
+      <a class="btn" style="border:1.5px solid rgba(255,255,255,.6);color:#fff">Access the data</a>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b>~6 PB</b><span>captured per million hours recorded</span></div>
+    <div class="stat"><b>~$200</b><span>starter kit, commodity parts</span></div>
+    <div class="stat"><b>6–20</b><span>body sensors, millisecond-synced</span></div>
+    <div class="stat"><b>Free</b><span>for researchers and pre-revenue work</span></div>
+  </div>
+
+  <section>
+    <div class="kicker">The problem</div>
+    <h2>Robots have no Common Crawl.</h2>
+    <p class="lead">Language models read the internet. Vision models saw billions of photos. Robots have nothing close — no free, petabyte-scale record of physical human work to learn from. What exists comes from mocap studios, lab sets, and teleoperation: expensive, narrow, and missing the part that matters most — how people share space, tools, and tasks in the chaos of real work.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="kicker">How it works</div>
+    <h2>Wear a light kit. Record real work. Own a share.</h2>
+    <div class="cards">
+      <div class="card"><div class="n">01</div><h3>Wear the kit</h3><p>An MMT core — wide camera, depth, audio, motion — plus a small swarm of body sensors for full-body pose. Concealable, all-day.</p></div>
+      <div class="card"><div class="n">02</div><h3>Capture verified sessions</h3><p>Go about ordinary work. You control what each session records; every hour clears automated quality and consent checks before it counts.</p></div>
+      <div class="card"><div class="n">03</div><h3>Earn a share</h3><p>Every verified hour earns a proportional share of what the dataset earns from licensing — and the earliest contributors hold the largest shares.</p></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="split">
+      <div class="panel dark">
+        <h3>For contributors</h3>
+        <p>Turn ordinary daily work into a stake in the data robots are built on. No special skills — the data belongs to the people who make it.</p>
+        <a class="btn btn-light">Start contributing</a>
+      </div>
+      <div class="panel tint">
+        <h3>For researchers &amp; labs</h3>
+        <p>Free for research and pre-revenue development. A governed, in-the-wild, multimodal corpus you can't scrape or cheaply build alone.</p>
+        <a class="btn btn-ghost">Access the WELL</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="kicker">Built and field-proven</div>
+    <h2>The capture stack works today.</h2>
+    <p class="lead">Working hardware, firmware, the millisecond-synced collection protocol, and the harvest-and-upload pipeline are built and proven in real multi-device field testing. What remains is field scale, not a research breakthrough.</p>
+    <img class="photo" src="../assets/images/trace-mmt-carrier-photo.jpg" alt="TRACE MMT carrier board">
+  </section>
+
+  <section style="padding-top:0">
+    <div class="well">
+      <h2>The WELL</h2>
+      <p>A governed, in-the-wild human-task corpus — large enough to train the next generation of behavior models, and built by the people it pays.</p>
+      <a class="btn btn-light">Own your part</a>
+    </div>
+  </section>
+</div>
+
+<footer><div class="wrap foot">
+  <div><span class="brand" style="font-size:18px">TRACE</span> &nbsp; The missing data layer for robots that work with humans.</div>
+  <div>A multinational organization · contributors in the US and beyond</div>
+</div></footer>
+</body>
+</html>

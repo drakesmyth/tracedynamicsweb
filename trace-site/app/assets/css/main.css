@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --trace-canvas: #fbfcf8;
+  --trace-ink: #071b3d;
+  --trace-muted: #53637b;
+  --trace-line: #dfe8e1;
+  --trace-cloud: #eef6f2;
+  --trace-navy: #064579;
+  --trace-blue: #005aa9;
+  --trace-sky: #0aa7d9;
+  --trace-cyan: #11b7c8;
+  --trace-green: #43a642;
+  --trace-lime: #9bd13d;
+  --trace-leaf: #67b638;
+  --trace-radius: 8px;
+  --trace-brand-gradient: linear-gradient(
+    115deg,
+    var(--trace-blue) 0%,
+    var(--trace-cyan) 44%,
+    var(--trace-green) 72%,
+    var(--trace-lime) 100%
+  );
+}
+
+html {
+  background: var(--trace-canvas);
+  color: var(--trace-ink);
+  scroll-behavior: auto;
+}
+
+body {
+  min-width: 320px;
+  background:
+    linear-gradient(180deg, rgb(251 252 248 / 0) 0%, var(--trace-canvas) 46%),
+    linear-gradient(135deg, rgb(0 90 169 / 0.08), transparent 38%),
+    linear-gradient(225deg, rgb(103 182 56 / 0.08), transparent 42%),
+    var(--trace-canvas);
+  color: var(--trace-ink);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+::selection {
+  background: rgb(17 183 200 / 0.2);
+}
+
+:focus-visible {
+  outline: 2px solid var(--trace-blue);
+  outline-offset: 4px;
+}
+
+.page-enter-active,
+.page-leave-active,
+.layout-enter-active,
+.layout-leave-active {
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease;
+}
+
+.page-enter-from,
+.page-leave-to,
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.trace-gradient-text {
+  background: var(--trace-brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.trace-brand-surface {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 0.92), rgb(238 246 242 / 0.82)),
+    linear-gradient(125deg, rgb(10 167 217 / 0.12), transparent 48%),
+    linear-gradient(235deg, rgb(155 209 61 / 0.12), transparent 46%);
+}
+
+.trace-brand-surface::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(rgb(0 90 169 / 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(67 166 66 / 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(115deg, black, transparent 68%);
+}
+
+.trace-card {
+  position: relative;
+  overflow: hidden;
+  background: rgb(255 255 255 / 0.88);
+}
+
+.trace-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  content: "";
+  background: var(--trace-brand-gradient);
+}
+
+.trace-card-dark::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  content: "";
+  background: var(--trace-brand-gradient);
+}
+
+.trace-animated-divider {
+  position: relative;
+}
+
+.trace-animated-divider::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 36%;
+  content: "";
+  background: var(--trace-brand-gradient);
+  animation: trace-divider-scan 3.8s ease-in-out infinite;
+}
+
+@keyframes trace-divider-scan {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  50% {
+    transform: translateX(280%);
+  }
+
+  100% {
+    transform: translateX(-110%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .trace-animated-divider::before {
+    animation: none;
+    transform: none;
+  }
+}

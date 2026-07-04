@@ -1,0 +1,11 @@
+.data
+.env
+.env.*
+!.env.example
+.nuxt
+.output
+.vercel
+coverage
+docs
+node_modules
+style-mockups
