@@ -4,7 +4,7 @@ const configRows = [
     axis: 'MMT core',
     range: 'Gen3 / Gen4',
     detail:
-      'Chest- or head-mounted scene sensing: wide RGB, depth mapping, audio, barometric anchor, and motion.',
+      'Chest- or head-mounted scene sensing: wide RGB, depth mapping, audio, barometric anchor, and motion. Gen4 (Q2 2027) adds higher-resolution scene capture and true depth imaging.',
   },
   {
     axis: 'Body swarm',

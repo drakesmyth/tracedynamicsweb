@@ -1,15 +1,15 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Shop — Coming Soon',
+  title: 'Shop — Alpha Access',
   description:
-    'TRACE capture hardware is coming soon. Join the waitlist for MMT capture kits and body-sensor swarms.',
+    'TRACE capture hardware is coming soon. Request alpha access to help scale-test the kits, apps, and capture infrastructure.',
 })
 
 const kitPreview = [
   {
     axis: 'MMT core',
     range: 'Gen3 / Gen4',
-    detail: 'Chest- or head-mounted scene sensing: wide RGB, depth mapping, audio, barometric anchor, and motion.',
+    detail: 'Chest- or head-mounted scene sensing: wide RGB, depth mapping, audio, barometric anchor, and motion. Gen4 (Q2 2027) adds higher-resolution scene capture and true depth imaging.',
   },
   {
     axis: 'Body swarm',
@@ -30,21 +30,21 @@ useScrollReveal()
   <section class="trace-brand-surface border-b border-trace-line">
     <BaseContainer class="relative py-20 sm:py-28">
       <div class="mx-auto max-w-2xl text-center" data-reveal>
-        <BasePill tone="cyan">Shop · Coming soon</BasePill>
+        <BasePill tone="cyan">Shop · Alpha access</BasePill>
         <h1
           class="mt-6 font-display text-4xl font-bold leading-tight text-trace-ink sm:text-6xl"
         >
           Capture hardware is coming soon.
         </h1>
         <p class="mt-6 text-base leading-7 text-trace-muted sm:text-xl">
-          TRACE kits — an MMT core plus a configurable body-sensor swarm — open to
-          approved contributors first, as onboarding, capture guidance, and terms
-          come online. Join the waitlist and you are in the first group offered
-          hardware.
+          Public availability is on the way. Ahead of it, we're onboarding an
+          alpha cohort to scale-test the hardware, the apps, and the capture
+          infrastructure — request access to take part, and be first in line
+          for kits.
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-3">
           <BaseButton to="/request-access?path=hardware">
-            Join the waitlist
+            Request alpha access
           </BaseButton>
           <BaseButton to="/well" variant="secondary">Explore the WELL</BaseButton>
         </div>

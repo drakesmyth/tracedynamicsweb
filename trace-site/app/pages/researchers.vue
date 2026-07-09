@@ -37,7 +37,7 @@ const dataCards = [
   {
     eyebrow: 'Context',
     title: 'Scene and motion together.',
-    body: 'Pair first-person scene data with body-worn motion streams so policy work can connect intent, environment, and movement.',
+    body: 'Pair first-person, 3D scene data with body-worn motion streams so policy work can connect intent, environment, and movement.',
   },
   {
     eyebrow: 'Diversity',
@@ -111,6 +111,21 @@ const faqs = [
   },
 ]
 
+const advisorPoints = [
+  {
+    title: 'Tell us what matters',
+    body: 'The tasks, edge cases, and signal your models actually need.',
+  },
+  {
+    title: 'We tune the capture',
+    body: 'Capture priorities and protocols adjust to advisor input while the corpus is young.',
+  },
+  {
+    title: 'First on the data',
+    body: 'Advisors get early access to the sessions they helped define.',
+  },
+]
+
 useScrollReveal()
 </script>
 
@@ -153,6 +168,29 @@ useScrollReveal()
       </BaseGrid>
     </BaseSection>
 
+    <BaseSection
+      eyebrow="Early access · advisory"
+      title="Shape the corpus as it's captured."
+      lead="The WELL is still being built — which is the opening. Join early as a research advisor and we'll tune what we capture to what your work needs: the tasks, modalities, and conditions that matter for your models. You help define the dataset instead of inheriting one."
+    >
+      <div class="grid gap-8 sm:grid-cols-3">
+        <div v-for="item in advisorPoints" :key="item.title" data-reveal>
+          <div class="h-1 w-10 rounded-full" style="background: var(--trace-brand-gradient)" />
+          <h3 class="mt-4 font-display text-lg font-semibold text-trace-ink">
+            {{ item.title }}
+          </h3>
+          <p class="mt-2 text-sm leading-6 text-trace-muted">
+            {{ item.body }}
+          </p>
+        </div>
+      </div>
+      <div class="mt-8" data-reveal>
+        <BaseButton to="/request-access?path=researcher">
+          Apply for advisory access
+        </BaseButton>
+      </div>
+    </BaseSection>
+
     <GradientBand>
       <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <BaseHeading
@@ -172,6 +210,14 @@ useScrollReveal()
         </BaseGrid>
       </div>
     </GradientBand>
+
+    <BaseSection
+      eyebrow="Inside a session"
+      title="Exactly what a session gives you."
+      lead="Every capture is a synchronized bundle — sampled fast, stored at working rates, one clock across streams. This is the raw material your models would train on."
+    >
+      <SessionSpec />
+    </BaseSection>
 
     <BaseSection
       eyebrow="Research areas"

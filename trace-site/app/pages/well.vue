@@ -32,7 +32,7 @@ const dataStreams = [
   {
     eyebrow: 'Scene',
     title: 'What the person sees.',
-    body: 'Chest- or head-mounted capture records workspace context, tools, surfaces, obstacles, and nearby collaborators.',
+    body: 'Chest- or head-mounted capture records 3D workspace context, tools, surfaces, and obstacles.',
   },
   {
     eyebrow: 'Motion',
@@ -183,6 +183,14 @@ useScrollReveal()
         </BaseGrid>
       </div>
     </GradientBand>
+
+    <BaseSection
+      eyebrow="Inside a session"
+      title="What one capture session contains."
+      lead="Each session is a bundle of synchronized streams — sampled fast, stored at working rates, and aligned to the millisecond so a model can learn how they move together."
+    >
+      <SessionSpec />
+    </BaseSection>
 
     <BaseSection
       eyebrow="Inventory path"
