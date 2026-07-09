@@ -46,6 +46,16 @@ const pathOptions: Array<{
     label: 'Contributor onboarding',
     detail: 'Real-world capture work, validation, and session credit.',
   },
+  {
+    value: 'industry',
+    label: 'Industry & licensing',
+    detail: 'Commercial licensing, deployment, and partnership inquiries.',
+  },
+  {
+    value: 'media',
+    label: 'Media & press',
+    detail: 'Press, interviews, and background on TRACE and the WELL.',
+  },
 ]
 
 const form = reactive<{

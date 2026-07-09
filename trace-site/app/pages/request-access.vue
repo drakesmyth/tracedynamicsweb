@@ -1,9 +1,20 @@
 <script setup lang="ts">
-type AccessPath = 'hardware' | 'researcher' | 'contributor'
+type AccessPath =
+  | 'hardware'
+  | 'researcher'
+  | 'contributor'
+  | 'media'
+  | 'industry'
 
 const route = useRoute()
 
-const accessPaths: AccessPath[] = ['hardware', 'researcher', 'contributor']
+const accessPaths: AccessPath[] = [
+  'hardware',
+  'researcher',
+  'contributor',
+  'media',
+  'industry',
+]
 
 const isAccessPath = (value: unknown): value is AccessPath =>
   typeof value === 'string' && accessPaths.includes(value as AccessPath)
@@ -144,8 +155,8 @@ useScrollReveal()
 
     <BaseSection
       eyebrow="Which are you?"
-      title="One request. Three ways in."
-      lead="Pick the path that fits — the form routes hardware, research, and contributor requests to the right place."
+      title="One request, routed the right way."
+      lead="Contributors, researchers, and hardware are the main ways in. The same form also handles press and commercial-licensing inquiries — just pick Media or Industry."
       tone="soft"
     >
       <BaseGrid :columns="3" gap="lg">

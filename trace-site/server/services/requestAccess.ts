@@ -17,11 +17,15 @@ const escapeHtml = (value: string) =>
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;')
 
-const formatPathLabel = (path: RequestAccessRecord['path']) => ({
+const pathLabels: Record<RequestAccessRecord['path'], string> = {
   contributor: 'Contributor',
   hardware: 'Hardware',
   researcher: 'Researcher',
-}[path])
+  media: 'Media & press',
+  industry: 'Industry & licensing',
+}
+
+const formatPathLabel = (path: RequestAccessRecord['path']) => pathLabels[path]
 
 const getConfiguredDestinations = () => {
   const config = useRuntimeConfig()

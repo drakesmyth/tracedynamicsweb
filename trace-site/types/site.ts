@@ -27,7 +27,12 @@ export interface CheckoutRequest {
   lines: CheckoutLine[]
 }
 
-export type RequestAccessPath = 'hardware' | 'researcher' | 'contributor'
+export type RequestAccessPath =
+  | 'hardware'
+  | 'researcher'
+  | 'contributor'
+  | 'media'
+  | 'industry'
 
 export interface RequestAccessRequest {
   name: string
