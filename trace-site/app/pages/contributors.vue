@@ -80,7 +80,7 @@ const ownershipCards = [
     tone: 'plain' as const,
     eyebrow: 'Early network',
     title: 'The first hours are worth the most.',
-    body: 'Credit for each recorded hour is front-loaded: get in early and each hour of training data can still earn 30× or more the credit it will later — a head start that keeps compounding as the corpus grows.',
+    body: 'The rate for each recorded hour starts at up to 64× and only falls toward a 1× baseline. Get in early — 30× or more is still on the table for the first public contributors — and every hour you bank holds that rate for as long as the data licenses.',
   },
 ]
 
@@ -101,7 +101,7 @@ useScrollReveal()
     <HeroSection
       eyebrow="Contributors"
       title="Record your work once. Get paid as long as it earns."
-      lead="Capture the ordinary work you already do with a light sensor kit. Every time that data is licensed, you earn a share — and again on the next license, for as long as it keeps earning. The earliest hours earn the most."
+      lead="Capture the work you already do with a light sensor kit, and earn a share of the licensing revenue it generates — for as long as the data keeps earning. The earning rate is highest now and falls as the WELL grows, so the hours you bank early are worth the most, year after year. Kits ship to the first cohort first."
     >
       <template #actions>
         <BaseButton to="/request-access?path=contributor">
@@ -240,8 +240,9 @@ useScrollReveal()
             </li>
           </ol>
           <p class="mt-4 text-sm leading-6 text-trace-muted">
-            Record early and every hour carries a bigger multiplier — up to 64×,
-            and 30× or more for early public contributors.
+            The multiplier only falls — up to 64× at the start, 30× or more for
+            early public contributors, toward 1× as the network matures. The hours
+            you bank early hold their rate for good.
           </p>
         </div>
       </div>
@@ -249,8 +250,8 @@ useScrollReveal()
 
     <CtaPanel
       eyebrow="Start here"
-      title="Request contributor access for early hardware."
-      lead="Tell TRACE what you can capture, which settings you work in, and what kit configuration would make those sessions useful."
+      title="Get in while the rate is highest."
+      lead="The first cohort gets kits first, and every hour you bank early is worth more for good. Tell TRACE what you can capture and where you work to claim your place in line."
       primary-label="Request contributor access"
       primary-to="/request-access?path=contributor"
       secondary-label="Researcher path"
