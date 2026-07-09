@@ -59,31 +59,8 @@ const whyNowCards = [
   },
   {
     eyebrow: 'Hardware',
-    title: 'The robots arrived.',
-    body: 'Humanoid chassis with increasingly capable manipulation and locomotion are now built by a wide range of manufacturers. The bodies are here; the training data is not.',
-  },
-]
-
-const workflowSteps = [
-  {
-    eyebrow: '01',
-    title: 'Wear the kit',
-    body: 'A light multimodal core pairs with a small body-sensor swarm for pose, motion, audio, and environment capture.',
-  },
-  {
-    eyebrow: '02',
-    title: 'Record real work',
-    body: 'Contributors capture ordinary sessions in real spaces, not staged lab sets or narrow mocap studio routines.',
-  },
-  {
-    eyebrow: '03',
-    title: 'Verify and govern',
-    body: 'Sessions pass quality, consent, sync, and metadata checks before they become useful dataset inventory.',
-  },
-  {
-    eyebrow: '04',
-    title: 'License the WELL',
-    body: 'Researchers and builders access governed data, while contributors retain a stake in the value they create.',
+    title: 'The robots are here.',
+    body: 'Humanoid chassis with increasingly capable manipulation and locomotion are now built by a wide range of manufacturers. The bodies exist; the training data does not.',
   },
 ]
 
@@ -244,16 +221,6 @@ useScrollReveal()
       tone="soft"
     >
       <DataNetworkFlow />
-      <AnimatedDivider />
-      <BaseGrid :columns="4" gap="md">
-        <BaseCard
-          v-for="item in workflowSteps"
-          :key="item.title"
-          :eyebrow="item.eyebrow"
-          :title="item.title"
-          :body="item.body"
-        />
-      </BaseGrid>
     </BaseSection>
 
     <section class="bg-trace-ink py-16 text-white sm:py-20">
