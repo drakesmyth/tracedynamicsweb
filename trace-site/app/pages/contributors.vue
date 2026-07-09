@@ -73,14 +73,14 @@ const ownershipCards = [
   {
     tone: 'brand' as const,
     eyebrow: 'Contributor share',
-    title: 'Validated hours participate in the upside.',
-    body: 'TRACE is designed so the people producing the dataset participate when commercial licensing creates value. Exact terms are set during onboarding.',
+    title: 'Paid every time the data earns.',
+    body: 'Your share is not a one-time payout. Every time the WELL is licensed, contributors are paid a share of that payment — and again on the next one, for as long as the data keeps earning. Exact terms are set during onboarding.',
   },
   {
     tone: 'plain' as const,
     eyebrow: 'Early network',
-    title: 'The first useful hours matter most.',
-    body: 'Early contributors help seed the dataset, prove the capture workflow, and establish the task categories future researchers and builders can use.',
+    title: 'The first hours are worth the most.',
+    body: 'Credit for each recorded hour is front-loaded: get in early and each hour of training data can still earn 30× or more the credit it will later — a head start that keeps compounding as the corpus grows.',
   },
 ]
 
@@ -100,8 +100,8 @@ useScrollReveal()
   <div>
     <HeroSection
       eyebrow="Contributors"
-      title="Turn real work into the data robots need."
-      lead="TRACE is opening an early contributor path for people who can capture useful physical work with lightweight sensor hardware. Verified sessions help build the WELL: governed human task data for embodied AI."
+      title="Record your work once. Get paid as long as it earns."
+      lead="Capture the ordinary work you already do with a light sensor kit. Every time that data is licensed, you earn a share — and again on the next license, for as long as it keeps earning. The earliest hours earn the most."
     >
       <template #actions>
         <BaseButton to="/request-access?path=contributor">

@@ -5,10 +5,10 @@ export const primaryNavigation: NavigationItem[] = [
   { label: 'Contributors', to: '/contributors' },
   { label: 'Researchers', to: '/researchers' },
   { label: 'Shop', to: '/shop' },
+  { label: 'Request access', to: '/request-access' },
 ]
 
 export const footerNavigation: NavigationItem[] = [
   { label: 'Home', to: '/' },
-  { label: 'Request Access', to: '/request-access' },
   ...primaryNavigation,
 ]
