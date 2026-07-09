@@ -11,5 +11,6 @@ export const primaryNavigation: NavigationItem[] = [
 export const footerNavigation: NavigationItem[] = [
   { label: 'Home', to: '/' },
   ...primaryNavigation,
+  { label: 'FAQ', to: '/faq' },
   { label: 'Team', to: '/team' },
 ]
