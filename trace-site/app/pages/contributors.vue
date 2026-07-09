@@ -215,6 +215,36 @@ useScrollReveal()
           :body="item.body"
         />
       </BaseGrid>
+
+      <div
+        class="mt-8 grid items-center gap-8 rounded-trace border border-trace-line bg-white/70 p-6 shadow-soft lg:grid-cols-[auto_1fr]"
+        data-reveal
+      >
+        <EarningsCurve />
+        <div>
+          <p class="text-sm font-semibold uppercase text-trace-blue">
+            How the recurring share works
+          </p>
+          <ol class="mt-4 grid gap-3 text-sm leading-6 text-trace-muted">
+            <li>
+              <span class="font-semibold text-trace-ink">Your session is validated</span>
+              and enters the WELL.
+            </li>
+            <li>
+              <span class="font-semibold text-trace-ink">Each time it is licensed</span>,
+              you are paid a share of that payment.
+            </li>
+            <li>
+              <span class="font-semibold text-trace-ink">It pays again on the next license</span>
+              — for as long as the data keeps earning.
+            </li>
+          </ol>
+          <p class="mt-4 text-sm leading-6 text-trace-muted">
+            Record early and every hour carries a bigger multiplier — up to 64×,
+            and 30× or more for early public contributors.
+          </p>
+        </div>
+      </div>
     </BaseSection>
 
     <CtaPanel

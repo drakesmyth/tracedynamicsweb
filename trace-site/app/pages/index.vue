@@ -28,6 +28,25 @@ const heroStats = [
   },
 ]
 
+const capabilities = [
+  {
+    title: 'Measured',
+    body: 'Body motion read directly from worn sensors — not estimated from video.',
+  },
+  {
+    title: 'In the wild',
+    body: 'Real work in real spaces, not staged lab sets or mocap studios.',
+  },
+  {
+    title: 'Multimodal',
+    body: 'Motion, depth mapping, video, and audio, synchronized to the millisecond.',
+  },
+  {
+    title: 'Open',
+    body: 'Free for research, licensed for commercial — a corpus, not a captive silo.',
+  },
+]
+
 const problemCards = [
   {
     eyebrow: 'Language',
@@ -148,6 +167,16 @@ useScrollReveal()
       </template>
     </HeroSection>
 
+    <BaseSection
+      eyebrow="The difference"
+      title="Video guesses where your body is. We measure it."
+      lead="Pose inferred from video drifts 15–25 cm per joint. TRACE reads body motion directly from worn sensors, so the record sits where the movement actually happened."
+    >
+      <div class="mx-auto max-w-2xl">
+        <AccuracyContrast />
+      </div>
+    </BaseSection>
+
     <BaseSection>
       <BaseGrid :columns="4" gap="sm">
         <BaseStat
@@ -158,6 +187,23 @@ useScrollReveal()
           :detail="item.detail"
         />
       </BaseGrid>
+    </BaseSection>
+
+    <BaseSection
+      eyebrow="What makes it different"
+      title="Measured. In the wild. Multimodal. Open."
+    >
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div v-for="item in capabilities" :key="item.title" data-reveal>
+          <div class="h-1 w-10 rounded-full" style="background: var(--trace-brand-gradient)" />
+          <h3 class="mt-4 font-display text-xl font-semibold text-trace-ink">
+            {{ item.title }}
+          </h3>
+          <p class="mt-2 text-sm leading-6 text-trace-muted">
+            {{ item.body }}
+          </p>
+        </div>
+      </div>
     </BaseSection>
 
     <GradientBand>
