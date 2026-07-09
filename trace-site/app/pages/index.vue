@@ -7,24 +7,24 @@ useSeoMeta({
 
 const heroStats = [
   {
-    value: 'MMT',
-    label: 'core unit',
-    detail: 'Chest- or head-mounted multimodal scene capture.',
+    value: '15–25 cm',
+    label: 'the gap we close',
+    detail: 'How far video-estimated pose drifts from measured ground truth per joint. TRACE measures kinematics directly.',
   },
   {
-    value: '6-20',
+    value: '6 PB',
+    label: 'per million hours',
+    detail: 'Synchronized video, depth, audio, and measured kinematics on Gen3 — roughly 10× that on Gen4.',
+  },
+  {
+    value: '6–20',
     label: 'body sensors',
-    detail: 'Millisecond-synced pose and motion fidelity.',
+    detail: 'A body-worn swarm for full-body pose, synchronized to the millisecond.',
   },
   {
-    value: '7/7',
-    label: 'device harvest',
-    detail: 'Field-tested swarm collection and upload workflow.',
-  },
-  {
-    value: 'Early',
-    label: 'research path',
-    detail: 'Fit-first access for research and pre-revenue development.',
+    value: '~$200',
+    label: 'baseline kit',
+    detail: 'Deliberately commodity parts, sourced and built almost anywhere electronics are made.',
   },
 ]
 
@@ -58,9 +58,9 @@ const whyNowCards = [
     body: 'Across language and vision, more real-world data beat cleverer architectures again and again.',
   },
   {
-    eyebrow: 'Sensors',
-    title: 'The parts got cheap.',
-    body: 'Industrial-grade motion sensors, radios, depth cameras, and batteries are now commodity parts.',
+    eyebrow: 'Hardware',
+    title: 'The robots arrived.',
+    body: 'Humanoid chassis with increasingly capable manipulation and locomotion are now built by a wide range of manufacturers. The bodies are here; the training data is not.',
   },
 ]
 
@@ -206,7 +206,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Why now"
       title="Three things became true at once."
-      lead="The robotics market is moving, the AI playbook is obvious, and the capture hardware is finally cheap enough to scale outside the lab."
+      lead="Capital is treating humanoid robotics as a platform shift, the data lesson from language and vision is settled, and capable robot chassis are finally shipping from a wide range of makers."
     >
       <BaseGrid :columns="3" gap="lg">
         <BaseCard
@@ -325,7 +325,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Validation"
       title="Governance starts before data earns credit."
-      lead="The public story should be honest: real-world capture brings privacy, consent, and quality risk. TRACE handles that through capture modes, contributor guidance, and validation gates."
+      lead="Real-world capture carries privacy, consent, and quality risk. TRACE handles that through capture modes, contributor guidance, and validation gates before any session earns credit."
       tone="soft"
     >
       <BaseGrid :columns="3" gap="lg">
@@ -344,7 +344,7 @@ useScrollReveal()
         <BaseHeading
           eyebrow="Who it is for"
           title="Contributors create the corpus. Researchers build with it."
-          lead="TRACE has two primary audiences on the public site. The homepage should make both paths obvious without splitting the story too early."
+          lead="Contributors turn everyday work into verified training data; researchers build on a corpus that cannot be scraped. Both start from the same access path."
         />
 
         <BaseGrid :columns="2" gap="lg">
