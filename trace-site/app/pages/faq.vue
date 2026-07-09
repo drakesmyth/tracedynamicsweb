@@ -116,6 +116,27 @@ const faqGroups = [
       },
     ],
   },
+  {
+    category: 'Our thinking',
+    items: [
+      {
+        q: 'Is this just a data play, or do you believe in something?',
+        a: 'Both — and for TRACE they are the same thing. The behavior of the robots that will share our homes and workplaces is shaped by what they learn from, and the record of real, cooperative human work does not exist yet at the scale or quality this needs. We think building it matters, and that it should be built in the open, with the people who produce it sharing in what it earns. That conviction is why the model looks the way it does; it is not a story told on top of it.',
+      },
+      {
+        q: 'Aren\'t you just helping robots replace people?',
+        a: 'The robots are being built either way. It\'s settled, not something TRACE can start or stop. The real question is what kind of robots will they be: helpful, general machines that cooperate with people on everyday work, or narrow ones built to take the jobs people used to be paid for and meter access to what they do, extracting subscriptions for every skill and task.\n\nWhich future we get depends largely on what these systems learn from and who controls them. TRACE is building toward the first — an open record of real, cooperative human work that the people who create it share in, and individuals, institutions, and businesses can build on — because we would rather help build that future than leave it to whoever encloses the data first.',
+      },
+      {
+        q: 'Why open the data instead of keeping it?',
+        a: 'A captive, single-vendor dataset serves one company\'s robots; an open corpus serves everyone building embodied AI. It is a stronger position, not a charitable one — the window to establish a shared, neutral resource before the space consolidates is finite, and getting there first is the advantage. Open is the strategy and the principle at once.',
+      },
+      {
+        q: 'What kind of AI are you trying to help build?',
+        a: 'Systems that can work alongside people — anticipate a movement, share a space, hand something off, cooperate — because they were trained on how humans really do those things. Competence and good behavior grown from real experience, rather than bolted on afterward. What goes into the training is what comes out of it.',
+      },
+    ],
+  },
 ]
 
 useHead({
@@ -168,8 +189,12 @@ useScrollReveal()
           <h3 class="font-display text-lg font-semibold text-trace-ink">
             {{ item.q }}
           </h3>
-          <p class="mt-2 max-w-3xl text-sm leading-7 text-trace-muted sm:text-base">
-            {{ item.a }}
+          <p
+            v-for="(para, pi) in item.a.split('\n\n')"
+            :key="pi"
+            class="mt-2 max-w-3xl text-sm leading-7 text-trace-muted sm:text-base"
+          >
+            {{ para }}
           </p>
         </div>
       </div>
