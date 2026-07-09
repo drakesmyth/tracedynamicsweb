@@ -261,7 +261,7 @@ const resetRequest = () => {
     </div>
 
     <p class="mt-4 text-sm leading-6 text-trace-muted">
-      Sends to the TRACE intake endpoint. CRM delivery is the next integration.
+      Your request goes straight to the TRACE team, who follow up about next steps.
     </p>
 
     <div

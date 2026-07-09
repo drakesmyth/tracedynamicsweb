@@ -12,14 +12,14 @@ const contributorStats = [
     detail: 'Chest- or head-mounted scene and task sensing.',
   },
   {
-    value: '6-20',
+    value: '6–20',
     label: 'body sensors',
     detail: 'Configured by task, motion fidelity, and setting.',
   },
   {
     value: '~$200',
     label: 'baseline target',
-    detail: 'V3.5-class core plus six to eight sensors.',
+    detail: 'Gen3-class core plus six to eight body sensors.',
   },
   {
     value: 'Gated',
@@ -74,7 +74,7 @@ const ownershipCards = [
     tone: 'brand' as const,
     eyebrow: 'Contributor share',
     title: 'Validated hours participate in the upside.',
-    body: 'TRACE is designed so the people producing the dataset participate when commercial licensing creates value. Exact terms belong in onboarding, not vague marketing copy.',
+    body: 'TRACE is designed so the people producing the dataset participate when commercial licensing creates value. Exact terms are set during onboarding.',
   },
   {
     tone: 'plain' as const,

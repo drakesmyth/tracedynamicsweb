@@ -44,6 +44,11 @@ const dataStreams = [
     title: 'When actions unfold.',
     body: 'Synced streams turn ordinary sessions into useful sequences: before, during, after, and between task moments.',
   },
+  {
+    eyebrow: 'Sound',
+    title: 'What the space says.',
+    body: 'Synchronized audio carries spoken instructions, a warning versus a comment, an approaching vehicle, or the shatter of a dropped glass — physical events vision misses.',
+  },
 ]
 
 const inventorySteps = [
@@ -167,7 +172,7 @@ useScrollReveal()
           lead="The useful substrate is the hard-to-scrape record of human work: body motion, scene context, tools, timing, proximity, and cooperation. The WELL is designed to make that record available without pretending real-world capture is simple."
         />
 
-        <BaseGrid :columns="3" gap="md">
+        <BaseGrid :columns="2" gap="md">
           <BaseCard
             v-for="item in dataStreams"
             :key="item.title"

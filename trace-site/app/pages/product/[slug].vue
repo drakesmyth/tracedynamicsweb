@@ -110,20 +110,20 @@ useScrollReveal()
       <div class="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
         <BaseHeading
           eyebrow="Availability"
-          title="Checkout waits for the right operating layer."
-          lead="TRACE can show the product path now, but paid checkout should come after inventory, contributor onboarding, capture rules, and terms are ready."
+          title="Checkout opens once the kit is ready to ship responsibly."
+          lead="Paid checkout follows inventory, contributor onboarding, capture rules, and terms. Until then, the waitlist reserves your place."
         />
 
         <BaseGrid :columns="3" gap="md">
           <BaseCard
             eyebrow="Status"
             :title="product.status"
-            body="This label reflects the public product path today, not a live stock count."
+            body="Where this kit sits in the rollout today, not a live stock count."
           />
           <BaseCard
             eyebrow="Pricing"
             :title="product.price"
-            body="Final pricing can be wired through Shopify once product schema and fulfillment rules are set."
+            body="Final pricing is set once the kit configuration, fulfillment, and terms are finalized."
           />
           <BaseCard
             eyebrow="Next step"

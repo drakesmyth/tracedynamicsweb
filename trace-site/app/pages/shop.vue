@@ -21,12 +21,12 @@ const shopStats = [
   {
     value: '~$200',
     label: 'baseline target',
-    detail: 'Target for V3.5-class core plus six to eight sensors.',
+    detail: 'Gen3-class core plus six to eight body sensors.',
   },
   {
     value: 'Waitlist',
     label: 'current status',
-    detail: 'Checkout opens after hardware access, onboarding, and terms are ready.',
+    detail: 'Kits open to approved contributors as onboarding and terms come online.',
   },
 ]
 
@@ -55,19 +55,19 @@ const kitSteps = [
 
 const readinessCards = [
   {
-    eyebrow: 'Available now',
-    title: 'Product intent and waitlist.',
-    body: 'The site can explain kit paths, collect early interest through the contributor flow, and set expectations before checkout opens.',
+    eyebrow: 'Now',
+    title: 'Join the waitlist.',
+    body: 'Tell TRACE what work you can capture and which kit fits. Approved contributors are onboarded first.',
   },
   {
     eyebrow: 'Next',
-    title: 'Hardware access and onboarding.',
-    body: 'TRACE still needs contributor onboarding, capture-mode guidance, availability windows, and legal terms before paid checkout is responsible.',
+    title: 'Onboarding and capture guidance.',
+    body: 'Contributors receive capture modes, consent guidance, and validation rules before recording sessions that count.',
   },
   {
     eyebrow: 'Later',
-    title: 'Shopify checkout.',
-    body: 'The API layer is already in place, but live products and checkout should wait for Shopify credentials and finalized product schema.',
+    title: 'Direct kit checkout.',
+    body: 'Once kits, pricing, and terms are finalized, hardware becomes available to onboarded contributors directly.',
   },
 ]
 
@@ -75,7 +75,7 @@ const faqs = [
   {
     eyebrow: 'Can I buy today?',
     title: 'Not yet. This is a waitlist surface.',
-    body: 'The public shop is ready for hardware interest, but checkout should stay closed until inventory, onboarding, capture rules, and terms are finalized.',
+    body: 'Not yet. Kits open to onboarded contributors once inventory, capture rules, and terms are finalized. The waitlist is how you get in line.',
   },
   {
     eyebrow: 'What is required?',
@@ -126,7 +126,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Hardware paths"
       title="Start with the kit. Scale motion fidelity as the work demands."
-      lead="The shop should make the hardware access model clear without pretending checkout is live. These are the first hardware pathways TRACE needs to support."
+      lead="Kits scale from a baseline configuration up as the work demands. These are the first hardware paths open to contributors."
       tone="soft"
     >
       <div class="grid gap-6 lg:grid-cols-3">
@@ -196,7 +196,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="How buying starts"
       title="Access should follow onboarding, not impulse checkout."
-      lead="TRACE hardware creates data with privacy, consent, and contributor-accounting implications. The first shop experience should route people into the right path before payment."
+      lead="TRACE hardware creates data with privacy, consent, and contributor-accounting implications, so access routes you into the right path before any payment."
     >
       <BaseGrid :columns="4" gap="md">
         <BaseCard
@@ -212,9 +212,9 @@ useScrollReveal()
     <GradientBand>
       <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <BaseHeading
-          eyebrow="Checkout status"
-          title="The storefront is ready before commerce is live."
-          lead="That is intentional. The page can set hardware expectations now, then connect to Shopify once product schema, inventory, pricing, and terms are finalized."
+          eyebrow="Rollout"
+          title="Access opens to contributors first."
+          lead="Kits go live as onboarding, capture guidance, and terms come online. Join the waitlist now and you are in the first group offered hardware."
         />
 
         <BaseGrid :columns="3" gap="md">
@@ -232,7 +232,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="FAQ"
       title="Clear expectations make the waitlist stronger."
-      lead="This shop is a product surface, not a live cart. It should answer the questions that matter before people join the hardware path."
+      lead="A few things worth knowing before you join the hardware waitlist."
     >
       <BaseGrid :columns="3" gap="lg">
         <BaseCard

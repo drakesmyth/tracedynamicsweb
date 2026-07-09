@@ -53,7 +53,7 @@ const intakeSteps = [
   {
     value: '03',
     label: 'Handoff',
-    detail: 'The form becomes the integration point for onboarding and CRM flow.',
+    detail: 'Your request routes into onboarding so the right team follows up.',
   },
 ]
 
@@ -78,7 +78,7 @@ useScrollReveal()
           <BaseHeading
             eyebrow="Intake"
             title="Route the request before the product path opens."
-            lead="TRACE needs the first access surface to collect intent, not payment. That keeps hardware, research, and contributor conversations aligned with the operating layer being built."
+            lead="This first step collects intent, not payment — so hardware, research, and contributor conversations start in the right place."
           />
 
           <div class="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
@@ -99,7 +99,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Routing"
       title="The same form can serve three early access motions."
-      lead="The public site should make it easy to say what someone needs, while TRACE keeps final terms, checkout, and data access tied to the right operational process."
+      lead="Tell TRACE what you need in one place; final terms, checkout, and data access follow through the right onboarding path."
       tone="soft"
     >
       <BaseGrid :columns="3" gap="lg">

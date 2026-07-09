@@ -35,11 +35,11 @@ export const hardwareProducts: HardwareProduct[] = [
     summary:
       'The starter path for contributors: one MMT core plus a six-to-eight sensor body swarm for eligible real-world sessions.',
     body: 'The baseline kit is the first complete contributor configuration TRACE needs to support. It pairs scene context with enough body motion fidelity to capture real tasks without a studio.',
-    includes: ['MMT V3.5-class core', '6-8 body sensors', 'Session capture path'],
+    includes: ['MMT Gen3-class core', '6-8 body sensors', 'Session capture path'],
     specs: [
       {
         label: 'Core',
-        value: 'MMT V3.5',
+        value: 'MMT Gen3',
         detail: 'Chest- or head-mounted scene, audio, depth, motion, and task context.',
       },
       {

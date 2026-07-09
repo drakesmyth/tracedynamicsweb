@@ -19,7 +19,7 @@ const researchStats = [
   {
     value: 'Early',
     label: 'access path',
-    detail: 'Built for fit-first research and pre-revenue exploration.',
+    detail: 'Built for early research and pre-revenue exploration.',
   },
   {
     value: 'License',
@@ -40,9 +40,9 @@ const dataCards = [
     body: 'Pair first-person scene data with body-worn motion streams so policy work can connect intent, environment, and movement.',
   },
   {
-    eyebrow: 'Scale',
+    eyebrow: 'Diversity',
     title: 'Outside the lab.',
-    body: 'The research value comes from ordinary settings that mocap studios and staged demos rarely capture well.',
+    body: 'Generalization tracks the diversity of training data more than raw repetitions — and diversity is exactly what ordinary, varied settings produce and staged demos cannot.',
   },
 ]
 
@@ -107,7 +107,7 @@ const faqs = [
   {
     eyebrow: 'Synthetic data',
     title: 'Why not use simulation only?',
-    body: 'Simulation can help, but robots still need the messy record of human physical behavior: timing, hesitation, tool use, proximity, and adaptation.',
+    body: 'Simulation and video-estimated pose help, but benchmarked against marker-based capture, pose inferred from video drifts 15–25 cm per joint. Robots still need the measured record of human physical behavior: timing, hesitation, tool use, proximity, and adaptation.',
   },
 ]
 
@@ -247,7 +247,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Questions"
       title="The research path should stay precise."
-      lead="The goal is not to promise a magic robotics dataset. The goal is to build a practical, governed corpus that makes hard physical behavior easier to study."
+      lead="Not a magic robotics dataset — a practical, governed corpus that makes hard physical behavior easier to study."
     >
       <BaseGrid :columns="3" gap="lg">
         <BaseCard
