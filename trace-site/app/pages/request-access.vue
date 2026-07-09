@@ -32,24 +32,6 @@ useSeoMeta({
     'Contribute your work, access the WELL for research, or join the hardware waitlist. One request, routed the right way.',
 })
 
-const audienceCards = [
-  {
-    eyebrow: 'Contribute your work',
-    title: 'Record real work. Share the upside.',
-    body: 'Wear a low-cost kit while you do your ordinary job, and earn a share of the licensing revenue your recordings help create. Issuance is front-loaded, so the earliest contributors hold the largest share. We ask that you capture real work and let the anonymized data join the open corpus.',
-  },
-  {
-    eyebrow: 'Access the data',
-    title: 'Build on data you cannot scrape.',
-    body: 'Embodied-AI and robotics teams get the WELL: multimodal, in-the-wild human-motion data for training and evaluating behavior models. Free for research and non-commercial use; commercial deployment is a separate license. We ask that you sign the data license and tell us your use case.',
-  },
-  {
-    eyebrow: 'Get the kit',
-    title: 'Join the hardware waitlist.',
-    body: 'Reserve the MMT capture core and a 6–20-sensor body swarm, targeted at about $200. Kits open to approved contributors first. We ask nothing yet — tell us your setup so we can prioritize.',
-  },
-]
-
 const steps = [
   {
     eyebrow: '01',
@@ -73,11 +55,19 @@ const steps = [
   },
 ]
 
-const faqs = [
+const faqs: {
+  eyebrow: string
+  title: string
+  body: string
+  to?: string
+  linkLabel?: string
+}[] = [
   {
     eyebrow: 'Is this real?',
     title: 'Who is behind TRACE?',
-    body: 'TRACE Dynamics is building an open, neutral, multimodal corpus for embodied AI. The core capture stack — sensor hardware, firmware, the millisecond-synced collection protocol, and the harvest-and-upload pipeline — is already built and proven in multi-device field testing. The work now is scaling contributors.',
+    body: 'A small, founder-led team building the whole stack end to end — capture hardware, firmware, the WELL corpus, and the contributor network. That stack is already built and proven in multi-device field testing; the work now is scaling contributors.',
+    to: '/team',
+    linkLabel: 'Meet the team',
   },
   {
     eyebrow: 'Payment',
@@ -100,9 +90,9 @@ const faqs = [
     body: 'A baseline kit — an MMT core plus six to eight body sensors — targets about $200. Hardware opens to approved contributors first; join the waitlist and you are in the first group offered kits.',
   },
   {
-    eyebrow: 'Commitment',
-    title: 'Can I stop contributing?',
-    body: 'Contribution is voluntary. You choose whether and what to record, and you can stop at any time. Questions about specific sessions are handled during onboarding.',
+    eyebrow: 'Obligation',
+    title: 'Is there any obligation?',
+    body: 'None. No minimum, no schedule, no lock-in — you contribute the sessions you want, when they fit your work. And because your share tracks what you actually contribute, more hours simply means more earning.',
   },
 ]
 
@@ -154,23 +144,6 @@ useScrollReveal()
     </BaseSection>
 
     <BaseSection
-      eyebrow="Which are you?"
-      title="One request, routed the right way."
-      lead="Contributors, researchers, and hardware are the main ways in. The same form also handles press and commercial-licensing inquiries — just pick Media or Industry."
-      tone="soft"
-    >
-      <BaseGrid :columns="3" gap="lg">
-        <BaseCard
-          v-for="item in audienceCards"
-          :key="item.title"
-          :eyebrow="item.eyebrow"
-          :title="item.title"
-          :body="item.body"
-        />
-      </BaseGrid>
-    </BaseSection>
-
-    <BaseSection
       eyebrow="How it works"
       title="From request to first data."
       lead="The same simple path, whichever way you join."
@@ -199,7 +172,16 @@ useScrollReveal()
           :eyebrow="item.eyebrow"
           :title="item.title"
           :body="item.body"
-        />
+        >
+          <template v-if="item.to" #footer>
+            <NuxtLink
+              :to="item.to"
+              class="text-sm font-semibold text-trace-blue transition hover:text-trace-cyan"
+            >
+              {{ item.linkLabel }} →
+            </NuxtLink>
+          </template>
+        </BaseCard>
       </BaseGrid>
     </BaseSection>
 
