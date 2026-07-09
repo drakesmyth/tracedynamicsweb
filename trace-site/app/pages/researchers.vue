@@ -226,10 +226,10 @@ useScrollReveal()
     >
       <div class="grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
         <MediaFrame
-          src="/media/trace-mmt-board-render.jpg"
-          alt="TRACE multimodal module board render"
+          src="/media/trace-mmt-render.jpg"
+          alt="The TRACE MMT — exploded view, size next to a quarter, and cap, headband, chest, and helmet mounts"
           eyebrow="Capture hardware"
-          caption="The MMT core anchors scene and task capture while body sensors add motion fidelity."
+          caption="The MMT core anchors scene and task capture; the body-worn LMT swarm adds motion fidelity."
           aspect="wide"
         />
 

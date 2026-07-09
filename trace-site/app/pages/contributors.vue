@@ -151,10 +151,10 @@ useScrollReveal()
     >
       <div class="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <MediaFrame
-          src="/media/trace-hardware-field-photo.jpeg?v=2"
-          alt="TRACE prototype hardware with sensor and camera connections"
-          eyebrow="Field hardware"
-          caption="Prototype TRACE capture hardware connected during bench and field testing."
+          src="/media/trace-work-diy.jpg"
+          alt="A person wearing the TRACE kit while drilling at a workbench at home"
+          eyebrow="Ordinary work"
+          caption="A contributor captures a normal task — the kit records how they reach, hold, and work, wherever the work happens."
           aspect="wide"
         />
 

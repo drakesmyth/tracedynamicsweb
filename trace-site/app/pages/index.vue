@@ -127,6 +127,14 @@ const audienceCards = [
   },
 ]
 
+const wornStrip = [
+  { src: '/media/trace-work-construction.jpg', label: 'Trades & construction', alt: 'A person wearing the TRACE kit walking through a construction site' },
+  { src: '/media/trace-work-reach.jpg', label: 'Stocking & picking', alt: 'A person wearing the TRACE kit reaching for a box on a warehouse shelf' },
+  { src: '/media/trace-work-lifting.jpg', label: 'Lifting & moving', alt: 'A person wearing the TRACE kit lifting a box from a pallet in a warehouse' },
+  { src: '/media/trace-work-diy.jpg', label: 'Repair & assembly', alt: 'A person wearing the TRACE kit drilling at a home workbench' },
+  { src: '/media/trace-work-home.jpg', label: 'Home & everyday', alt: 'A person wearing the TRACE kit tidying toys into a basket at home' },
+]
+
 useScrollReveal()
 </script>
 
@@ -150,18 +158,18 @@ useScrollReveal()
         <figure
           class="trace-card w-full max-w-xl rounded-trace border border-trace-line p-3 shadow-glow"
         >
-          <div class="aspect-[16/10] overflow-hidden rounded-[6px] bg-trace-ink">
+          <div class="aspect-[4/5] overflow-hidden rounded-[6px] bg-trace-ink">
             <img
-              src="/media/trace-mmt-board-render.jpg"
-              alt="TRACE MMT board render"
-              class="h-full w-full object-contain"
+              src="/media/trace-hero.jpg"
+              alt="A construction worker in a hard hat wearing the full TRACE kit — MMT on the helmet and chest, LMT motion sensors on arms, belt, and legs — walking a job site with blueprints"
+              class="h-full w-full object-cover"
               loading="eager"
             >
           </div>
           <figcaption class="grid gap-3 px-1 py-4 sm:grid-cols-3">
-            <BasePill tone="blue">Hardware</BasePill>
-            <BasePill tone="cyan">Sensor sync</BasePill>
-            <BasePill tone="green">Field data</BasePill>
+            <BasePill tone="blue">Real work</BasePill>
+            <BasePill tone="cyan">In the wild</BasePill>
+            <BasePill tone="green">Low-profile</BasePill>
           </figcaption>
         </figure>
       </template>
@@ -250,10 +258,10 @@ useScrollReveal()
       <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <ProductConfigPanel />
         <MediaFrame
-          src="/media/trace-hardware-field-photo.jpeg?v=2"
-          alt="TRACE hardware board with sensor connections"
-          eyebrow="Built hardware"
-          caption="Prototype capture hardware with real sensor, storage, power, and camera connections."
+          src="/media/trace-mmt-render.jpg"
+          alt="The TRACE MMT — exploded view of housing and sensor board, side profile next to a quarter for scale, and chest, headband, cap, and helmet mounts"
+          eyebrow="The MMT"
+          caption="The multimodal core: wide RGB, depth, audio, barometric, and motion — small enough to wear on a cap, chest, or helmet."
           fit="contain"
           aspect="wide"
         />
@@ -267,6 +275,33 @@ useScrollReveal()
       tone="soft"
     >
       <DataNetworkFlow />
+    </BaseSection>
+
+    <BaseSection
+      eyebrow="Worn during real work"
+      title="One kit, every kind of work."
+      lead="The same light rig rides along through lifting, reaching, assembly, and everything in between — capturing how people move on the job."
+    >
+      <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <figure
+          v-for="shot in wornStrip"
+          :key="shot.src"
+          class="overflow-hidden rounded-trace border border-trace-line shadow-soft"
+          data-reveal
+        >
+          <div class="aspect-[3/4] overflow-hidden bg-trace-ink">
+            <img
+              :src="shot.src"
+              :alt="shot.alt"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+          <figcaption class="bg-white px-3 py-2 text-sm font-semibold text-trace-ink">
+            {{ shot.label }}
+          </figcaption>
+        </figure>
+      </div>
     </BaseSection>
 
     <section class="bg-trace-ink py-16 text-white sm:py-20">

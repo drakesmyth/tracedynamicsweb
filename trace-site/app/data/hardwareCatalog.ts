@@ -29,8 +29,8 @@ export const hardwareProducts: HardwareProduct[] = [
     title: 'Baseline Capture Kit',
     price: '~$200 target',
     status: 'Waitlist',
-    image: '/media/trace-mmt-board-render.jpg',
-    alt: 'TRACE MMT board render',
+    image: '/media/trace-mmt-render.jpg',
+    alt: 'TRACE MMT render — exploded view, size next to a quarter, and mounts',
     imageFit: 'contain',
     summary:
       'The starter path for contributors: one MMT core plus a six-to-eight sensor body swarm for eligible real-world sessions.',
@@ -65,8 +65,8 @@ export const hardwareProducts: HardwareProduct[] = [
     title: 'MMT Module',
     price: 'Pricing TBD',
     status: 'Prototype',
-    image: '/media/trace-hardware-field-photo.jpeg?v=2',
-    alt: 'TRACE prototype hardware board with camera and storage connections',
+    image: '/media/trace-mmt-render.jpg',
+    alt: 'TRACE MMT render — housing, sensor board, and wearable mounts',
     imageFit: 'contain',
     summary:
       'The scene and task anchor for TRACE capture: wide RGB, depth mapping, audio, barometric context, motion, and local storage. Gen4 (Q2 2027) adds higher-resolution scene capture and true depth imaging.',

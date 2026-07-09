@@ -69,6 +69,16 @@ useScrollReveal()
           </div>
         </div>
       </div>
+
+      <div class="mx-auto mt-8 max-w-3xl" data-reveal>
+        <MediaFrame
+          src="/media/trace-lmt-mounting.jpg"
+          alt="LMT sensor mounting options — wrist, arm, thigh, calf, and ankle straps and a belt clip — with a full-kit wear example"
+          eyebrow="How you wear it"
+          caption="Low-profile sensors strap wherever the motion is, wrist to ankle, with the MMT on a cap or chest."
+          aspect="wide"
+        />
+      </div>
     </BaseContainer>
   </section>
 </template>
