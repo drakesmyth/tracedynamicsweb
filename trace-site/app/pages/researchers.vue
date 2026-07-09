@@ -9,7 +9,7 @@ const researchStats = [
   {
     value: 'WELL',
     label: 'data corpus',
-    detail: 'Governed real-world human task sessions for embodied AI.',
+    detail: 'Real-world human task sessions, validated and licensable.',
   },
   {
     value: 'Multi',
@@ -42,7 +42,7 @@ const dataCards = [
   {
     eyebrow: 'Diversity',
     title: 'Outside the lab.',
-    body: 'Generalization tracks the diversity of training data more than raw repetitions — and diversity is exactly what ordinary, varied settings produce and staged demos cannot.',
+    body: 'Generalization tracks the diversity of training data more than raw repetitions — and diversity is exactly what ordinary, varied settings produce and a controlled setup can\'t.',
   },
 ]
 
@@ -158,7 +158,7 @@ useScrollReveal()
         <BaseHeading
           eyebrow="The data"
           title="A useful robotics corpus has to preserve the body."
-          lead="Language datasets preserve words. Vision datasets preserve pixels. Robotics datasets need the coupled record of movement, environment, task progress, and human timing."
+          lead="Text and image datasets already exist at scale; the physical record does not. A robotics corpus has to preserve the coupled signal a body produces at work — movement, environment, task progress, and human timing."
         />
 
         <BaseGrid :columns="3" gap="md">
@@ -201,7 +201,7 @@ useScrollReveal()
 
     <BaseSection
       eyebrow="Access path"
-      title="Research access starts with fit, not a generic download."
+      title="Research access starts with fit."
       lead="TRACE matches access to the work being done. That keeps early research useful while respecting contributor accounting, consent boundaries, and deployment licensing."
       tone="soft"
     >
@@ -247,7 +247,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Questions"
       title="The research path should stay precise."
-      lead="Not a magic robotics dataset — a practical, governed corpus that makes hard physical behavior easier to study."
+      lead="A practical, honest corpus that makes hard physical behavior easier to study."
     >
       <BaseGrid :columns="3" gap="lg">
         <BaseCard
@@ -262,7 +262,7 @@ useScrollReveal()
 
     <CtaPanel
       eyebrow="Research access"
-      title="Start with the task data your team actually needs."
+      title="Start with the task data your team needs."
       lead="Tell TRACE what you are studying, which task categories matter, and whether the work is research-only, pre-revenue, or moving toward deployment."
       primary-label="Request research access"
       primary-to="/request-access?path=researcher"

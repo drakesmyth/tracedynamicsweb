@@ -31,7 +31,7 @@ const heroStats = [
 const capabilities = [
   {
     title: 'Measured',
-    body: 'Body motion read directly from worn sensors — not estimated from video.',
+    body: 'Body motion read straight from the sensors you wear, at the source.',
   },
   {
     title: 'In the wild',
@@ -43,7 +43,7 @@ const capabilities = [
   },
   {
     title: 'Open',
-    body: 'Free for research, licensed for commercial — a corpus, not a captive silo.',
+    body: 'Free for research, licensed for commercial — an open corpus anyone can build on.',
   },
 ]
 
@@ -69,7 +69,7 @@ const whyNowCards = [
   {
     eyebrow: 'Capital',
     title: 'The money arrived.',
-    body: 'Humanoid robotics is funded like a platform shift, but hardware alone does not teach robots how people actually work.',
+    body: 'Humanoid robotics is funded like a platform shift, but hardware alone does not teach robots how people work.',
   },
   {
     eyebrow: 'Data',
@@ -121,7 +121,7 @@ const audienceCards = [
     tone: 'plain' as const,
     eyebrow: 'Researchers',
     title: 'Build on data that cannot be scraped.',
-    body: 'The WELL gives embodied AI researchers a governed path toward physical-world behavior data, not another synthetic benchmark.',
+    body: 'The WELL gives embodied AI researchers real physical-world behavior data to build on.',
     to: '/request-access?path=researcher',
     label: 'Request access',
   },
@@ -135,7 +135,7 @@ useScrollReveal()
     <HeroSection
       eyebrow="The missing data layer for embodied AI"
       title="Robots have bodies. They do not have experience."
-      lead="TRACE records how people actually move, work, and cooperate in real spaces: the synchronized motion, depth mapping, video, and audio data the next generation of robots needs and no one can scrape."
+      lead="TRACE records how people move, work, and cooperate in real spaces: the synchronized motion, depth mapping, video, and audio data the next generation of robots needs and no one can scrape."
     >
       <template #actions>
         <BaseButton to="/request-access?path=contributor">
@@ -263,7 +263,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="How it works"
       title="Ordinary work becomes training data."
-      lead="The network path is intentionally simple: people capture eligible sessions, TRACE validates the data products, and the WELL becomes a governed corpus for behavior models."
+      lead="The path is direct: people capture eligible sessions, TRACE validates them, and the WELL becomes the corpus behavior models train on."
       tone="soft"
     >
       <DataNetworkFlow />
@@ -328,7 +328,7 @@ useScrollReveal()
           <BaseCard
             tone="brand"
             eyebrow="Pipeline"
-            title="Raw capture becomes governed inventory."
+            title="Raw capture becomes validated inventory."
             body="The processing path is designed for validation, grading, labeling, accounting, and access control before data is used downstream."
           />
         </div>
@@ -357,7 +357,7 @@ useScrollReveal()
         <BaseHeading
           eyebrow="Who it is for"
           title="Contributors create the corpus. Researchers build with it."
-          lead="Contributors turn everyday work into verified training data; researchers build on a corpus that cannot be scraped. Both start from the same access path."
+          lead="Contributors turn everyday work into verified training data; researchers build on real behavior no one else has. Both start from the same access path."
         />
 
         <BaseGrid :columns="2" gap="lg">
@@ -382,7 +382,7 @@ useScrollReveal()
     <CtaPanel
       eyebrow="Join the build"
       title="Help create the data layer robots cannot scrape."
-      lead="TRACE is building a practical path from real human work to governed embodied-AI training data. Contributors, researchers, and builders can plug into the system as it scales."
+      lead="TRACE is building a practical path from real human work to training data for embodied AI. Contributors, researchers, and builders can plug into the system as it scales."
       primary-label="Request access"
       primary-to="/request-access"
       secondary-label="Research access"

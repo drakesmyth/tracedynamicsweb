@@ -42,7 +42,7 @@ const captureSteps = [
   {
     eyebrow: '03',
     title: 'Capture real sessions',
-    body: 'Useful sessions come from real homes, shops, kitchens, benches, job sites, and workspaces rather than staged routines.',
+    body: 'Useful sessions come from real homes, shops, kitchens, benches, job sites, and workspaces — wherever the work already happens.',
   },
   {
     eyebrow: '04',
@@ -74,7 +74,7 @@ const ownershipCards = [
     tone: 'brand' as const,
     eyebrow: 'Contributor share',
     title: 'Paid every time the data earns.',
-    body: 'Your share is not a one-time payout. Every time the WELL is licensed, contributors are paid a share of that payment — and again on the next one, for as long as the data keeps earning. Exact terms are set during onboarding.',
+    body: 'Your share keeps paying. Every time the WELL is licensed, contributors are paid a share of that payment — and again on the next one, for as long as the data keeps earning. Exact terms are set during onboarding.',
   },
   {
     tone: 'plain' as const,
@@ -147,7 +147,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Eligible sessions"
       title="The first priority is useful, ordinary physical work."
-      lead="Strong contributor sessions show movement, tools, timing, proximity, and shared space. TRACE is especially interested in cooperative task data that is hard to synthesize or scrape."
+      lead="Strong contributor sessions show movement, tools, timing, proximity, and shared space. TRACE is especially interested in cooperative task data that can't be simulated or collected after the fact."
     >
       <div class="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <MediaFrame
@@ -203,7 +203,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="The upside"
       title="The people who produce the data should participate in what it earns."
-      lead="TRACE is built around contributor alignment. Exact terms belong in onboarding, but the principle is simple: useful verified work should not disappear into someone else's dataset."
+      lead="TRACE is built around contributor alignment: the work you verify should not disappear into someone else's dataset. Exact terms are set during onboarding."
     >
       <BaseGrid :columns="2" gap="lg">
         <BaseCard

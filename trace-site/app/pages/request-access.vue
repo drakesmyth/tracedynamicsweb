@@ -92,7 +92,7 @@ const faqs: {
   {
     eyebrow: 'Obligation',
     title: 'Is there any obligation?',
-    body: 'None. No minimum, no schedule, no lock-in — you contribute the sessions you want, when they fit your work. And because your share tracks what you actually contribute, more hours simply means more earning.',
+    body: 'None. No minimum, no schedule, no lock-in — you contribute the sessions you want, when they fit your work. And because your share tracks what you contribute, more hours means more earning.',
   },
 ]
 
@@ -117,7 +117,7 @@ useScrollReveal()
           <BaseHeading
             eyebrow="What this is"
             title="An open corpus of real human work."
-            lead="Not staged demos — people doing real jobs, captured with a chest- or head-mounted core plus 6–20 body sensors, so behavior models learn how humans actually move and cooperate. Free for research. Licensed for commercial use. Contributors share the revenue."
+            lead="Not staged demos — people doing real jobs, captured with a chest- or head-mounted core plus 6–20 body sensors, so behavior models learn how humans move and cooperate. Free for research. Licensed for commercial use. Contributors share the revenue."
           />
 
           <div class="mt-8 flex flex-wrap gap-2" data-reveal>
@@ -146,7 +146,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="How it works"
       title="From request to first data."
-      lead="The same simple path, whichever way you join."
+      lead="The same path, whichever way you join."
     >
       <BaseGrid :columns="4" gap="md">
         <BaseCard
@@ -178,7 +178,7 @@ useScrollReveal()
               :to="item.to"
               class="text-sm font-semibold text-trace-blue transition hover:text-trace-cyan"
             >
-              {{ item.linkLabel }} →
+              {{ item.linkLabel }}
             </NuxtLink>
           </template>
         </BaseCard>
@@ -188,7 +188,7 @@ useScrollReveal()
     <CtaPanel
       eyebrow="Not sure yet?"
       title="See what you would be joining."
-      lead="The WELL and contributor pages explain what TRACE captures, how the data is governed, and how contributors share in what it earns."
+      lead="The WELL and contributor pages explain what TRACE captures, how it's kept trustworthy, and how contributors share in what it earns."
       primary-label="Explore the WELL"
       primary-to="/well"
       secondary-label="For researchers"

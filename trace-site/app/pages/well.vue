@@ -24,7 +24,7 @@ const wellStats = [
   {
     value: 'Licensed',
     label: 'deployment',
-    detail: 'Research access can be open while production use stays governed.',
+    detail: 'Research access can be open while production use stays licensed.',
   },
 ]
 
@@ -116,7 +116,7 @@ const accessCards = [
     tone: 'plain' as const,
     eyebrow: 'Contribution',
     title: 'Create the corpus from real work.',
-    body: 'The contributor path turns eligible work sessions into governed data inventory after validation and quality review.',
+    body: 'The contributor path turns eligible work sessions into validated, licensable inventory after quality review.',
     to: '/request-access?path=contributor',
     label: 'Request contributor access',
   },
@@ -146,7 +146,7 @@ useScrollReveal()
           src="/media/trace-swarm-dashboard.jpg"
           alt="TRACE swarm dashboard showing completed data harvest"
           eyebrow="Pipeline"
-          caption="Swarm collection and harvest tooling gives TRACE a practical path from field capture to governed inventory."
+          caption="Swarm collection and harvest tooling gives TRACE a practical path from field capture to validated inventory."
           aspect="wide"
         />
       </template>
@@ -168,8 +168,8 @@ useScrollReveal()
       <div class="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
         <BaseHeading
           eyebrow="Why it exists"
-          title="Robots need physical experience, not another text corpus."
-          lead="The useful substrate is the hard-to-scrape record of human work: body motion, scene context, tools, timing, proximity, and cooperation. The WELL is designed to make that record available without pretending real-world capture is simple."
+          title="Robots need physical experience."
+          lead="Text and images were captured at scale; the physical record of human work was not — body motion, scene context, tools, timing, proximity, and cooperation. The WELL makes that record available without pretending real-world capture is easy."
         />
 
         <BaseGrid :columns="2" gap="md">
@@ -187,7 +187,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Inventory path"
       title="A recording is not inventory until it earns its way in."
-      lead="TRACE treats the WELL as governed infrastructure. The data path moves from capture to validation to packaging to licensing, with contributor accounting connected along the way."
+      lead="TRACE runs the WELL as managed infrastructure. The data path moves from capture to validation to packaging to licensing, with contributor accounting connected along the way."
     >
       <DataNetworkFlow />
 
@@ -231,7 +231,7 @@ useScrollReveal()
           <BaseHeading
             eyebrow="Dataset examples"
             title="The first valuable categories are ordinary."
-            lead="The WELL should not start with theatrical demos. It should start where robots are weakest: normal physical work, shared spaces, and messy human timing."
+            lead="The WELL starts where robots are weakest: normal physical work, shared spaces, and messy human timing."
             tone="inverse"
           />
 
