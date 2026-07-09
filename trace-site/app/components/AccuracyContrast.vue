@@ -95,7 +95,7 @@ const joints = Object.keys(J).map((n) => {
         <figcaption class="mt-3 text-center">
           <p class="text-sm font-semibold text-trace-ink">Measured directly</p>
           <p class="mt-1 inline-block rounded-full bg-trace-signal px-2.5 py-0.5 text-xs font-semibold text-trace-green">
-            on the joint
+            6–20 pose + motion sensors
           </p>
         </figcaption>
       </figure>

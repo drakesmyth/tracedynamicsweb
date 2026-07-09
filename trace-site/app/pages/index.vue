@@ -12,7 +12,7 @@ const heroStats = [
     detail: 'How far video-estimated pose drifts from measured ground truth per joint. TRACE measures kinematics directly.',
   },
   {
-    value: '6 PB',
+    value: '6 PB+',
     label: 'per million hours',
     detail: 'Synchronized video, depth mapping, audio, and measured kinematics on Gen3 — roughly 10× that on Gen4.',
   },
