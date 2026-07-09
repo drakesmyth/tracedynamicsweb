@@ -354,17 +354,18 @@ useScrollReveal()
 
         <div class="grid gap-5">
           <MediaFrame
-            src="/media/trace-swarm-dashboard.jpg"
-            alt="TRACE swarm status dashboard showing seven devices harvested"
-            eyebrow="Pipeline"
-            caption="Swarm collection dashboard showing completed harvest across seven devices."
+            src="/media/trace-hardware-boards.jpg"
+            alt="The built TRACE hardware — the MMT board with camera, sensors, storage, and radio, and two LMT motion-sensor boards"
+            eyebrow="The hardware"
+            caption="The MMT and LMT boards — camera, motion sensors, storage, and radio — built and field-tested today."
             aspect="wide"
           />
-          <BaseCard
-            tone="brand"
-            eyebrow="Pipeline"
-            title="Raw capture becomes validated inventory."
-            body="The processing path is designed for validation, grading, labeling, accounting, and access control before data is used downstream."
+          <MediaFrame
+            src="/media/trace-hardware-lmt.jpg"
+            alt="A single TRACE LMT motion-sensor board next to a pen for scale"
+            eyebrow="Actual size"
+            caption="One LMT motion sensor next to a pen — a finished board, small enough to wear anywhere."
+            aspect="wide"
           />
         </div>
       </div>
