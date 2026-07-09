@@ -40,7 +40,7 @@ export const hardwareProducts: HardwareProduct[] = [
       {
         label: 'Core',
         value: 'MMT Gen3',
-        detail: 'Chest- or head-mounted scene, audio, depth, motion, and task context.',
+        detail: 'Chest- or head-mounted scene, audio, depth mapping, motion, and task context.',
       },
       {
         label: 'Motion',
@@ -69,9 +69,9 @@ export const hardwareProducts: HardwareProduct[] = [
     alt: 'TRACE prototype hardware board with camera and storage connections',
     imageFit: 'contain',
     summary:
-      'The scene and task anchor for TRACE capture: wide RGB, depth, audio, barometric context, motion, and local storage.',
+      'The scene and task anchor for TRACE capture: wide RGB, depth mapping, audio, barometric context, motion, and local storage.',
     body: 'Every TRACE kit starts with the MMT. It gives body-sensor streams a real-world frame of reference: what the contributor was doing, what tools were present, and how the workspace changed.',
-    includes: ['Scene capture', 'Audio and depth ready', 'Storage and sync'],
+    includes: ['Scene capture', 'Audio and depth mapping ready', 'Storage and sync'],
     specs: [
       {
         label: 'Role',

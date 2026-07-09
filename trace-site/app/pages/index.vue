@@ -14,7 +14,7 @@ const heroStats = [
   {
     value: '6 PB',
     label: 'per million hours',
-    detail: 'Synchronized video, depth, audio, and measured kinematics on Gen3 — roughly 10× that on Gen4.',
+    detail: 'Synchronized video, depth mapping, audio, and measured kinematics on Gen3 — roughly 10× that on Gen4.',
   },
   {
     value: '6–20',
@@ -116,7 +116,7 @@ useScrollReveal()
     <HeroSection
       eyebrow="The missing data layer for embodied AI"
       title="Robots have bodies. They do not have experience."
-      lead="TRACE records how people actually move, work, and cooperate in real spaces: the synchronized motion, depth, video, and audio data the next generation of robots needs and no one can scrape."
+      lead="TRACE records how people actually move, work, and cooperate in real spaces: the synchronized motion, depth mapping, video, and audio data the next generation of robots needs and no one can scrape."
     >
       <template #actions>
         <BaseButton to="/request-access?path=contributor">

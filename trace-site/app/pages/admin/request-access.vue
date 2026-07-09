@@ -133,7 +133,7 @@ const clearRecords = () => {
         <BaseHeading
           eyebrow="Admin"
           title="Request access intake"
-          lead="Token-gated review and export for records accepted by the TRACE intake endpoint."
+          lead="Token-gated review and export of submitted request-access records."
         />
 
         <form

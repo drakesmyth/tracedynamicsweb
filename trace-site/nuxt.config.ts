@@ -63,6 +63,10 @@ export default defineNuxtConfig({
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
     },
   },
+  routeRules: {
+    // Storefront is gated behind the coming-soon /shop page.
+    '/product/**': { redirect: '/shop' },
+  },
   nitro: {
     preset: 'vercel',
   },

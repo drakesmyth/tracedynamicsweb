@@ -287,8 +287,8 @@ const resetRequest = () => {
         Thanks, {{ displayName }}.
       </p>
       <p class="mt-2 text-sm leading-6 text-trace-muted">
-        Your {{ selectedPath.label.toLowerCase() }} request was accepted by the
-        TRACE intake endpoint. Reference {{ requestId }}.
+        Your {{ selectedPath.label.toLowerCase() }} request is in. We'll follow up
+        as access opens — keep an eye on your inbox. Reference {{ requestId }}.
       </p>
     </div>
   </form>
