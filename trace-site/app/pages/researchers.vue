@@ -9,7 +9,7 @@ const researchStats = [
   {
     value: 'WELL',
     label: 'data corpus',
-    detail: 'Governed real-world human task sessions for embodied AI.',
+    detail: 'Real-world human task sessions, validated and licensable.',
   },
   {
     value: 'Multi',
@@ -19,7 +19,7 @@ const researchStats = [
   {
     value: 'Early',
     label: 'access path',
-    detail: 'Built for fit-first research and pre-revenue exploration.',
+    detail: 'Built for early research and pre-revenue exploration.',
   },
   {
     value: 'License',
@@ -37,12 +37,12 @@ const dataCards = [
   {
     eyebrow: 'Context',
     title: 'Scene and motion together.',
-    body: 'Pair first-person scene data with body-worn motion streams so policy work can connect intent, environment, and movement.',
+    body: 'Pair first-person, 3D scene data with body-worn motion streams so policy work can connect intent, environment, and movement.',
   },
   {
-    eyebrow: 'Scale',
+    eyebrow: 'Diversity',
     title: 'Outside the lab.',
-    body: 'The research value comes from ordinary settings that mocap studios and staged demos rarely capture well.',
+    body: 'Generalization tracks the diversity of training data more than raw repetitions — and diversity is exactly what ordinary, varied settings produce and a controlled setup can\'t.',
   },
 ]
 
@@ -107,7 +107,22 @@ const faqs = [
   {
     eyebrow: 'Synthetic data',
     title: 'Why not use simulation only?',
-    body: 'Simulation can help, but robots still need the messy record of human physical behavior: timing, hesitation, tool use, proximity, and adaptation.',
+    body: 'Simulation and video-estimated pose help, but benchmarked against marker-based capture, pose inferred from video drifts 15–25 cm per joint. Robots still need the measured record of human physical behavior: timing, hesitation, tool use, proximity, and adaptation.',
+  },
+]
+
+const advisorPoints = [
+  {
+    title: 'Tell us what matters',
+    body: 'The tasks, edge cases, and signal your models actually need.',
+  },
+  {
+    title: 'We tune the capture',
+    body: 'Capture priorities and protocols adjust to advisor input while the corpus is young.',
+  },
+  {
+    title: 'First on the data',
+    body: 'Advisors get early access to the sessions they helped define.',
   },
 ]
 
@@ -153,12 +168,35 @@ useScrollReveal()
       </BaseGrid>
     </BaseSection>
 
+    <BaseSection
+      eyebrow="Early access · advisory"
+      title="Shape the corpus as it's captured."
+      lead="The WELL is still being built — which is the opening. Join early as a research advisor and we'll tune what we capture to what your work needs: the tasks, modalities, and conditions that matter for your models. You help define the dataset instead of inheriting one."
+    >
+      <div class="grid gap-8 sm:grid-cols-3">
+        <div v-for="item in advisorPoints" :key="item.title" data-reveal>
+          <div class="h-1 w-10 rounded-full" style="background: var(--trace-brand-gradient)" />
+          <h3 class="mt-4 font-display text-lg font-semibold text-trace-ink">
+            {{ item.title }}
+          </h3>
+          <p class="mt-2 text-sm leading-6 text-trace-muted">
+            {{ item.body }}
+          </p>
+        </div>
+      </div>
+      <div class="mt-8" data-reveal>
+        <BaseButton to="/request-access?path=researcher">
+          Apply for advisory access
+        </BaseButton>
+      </div>
+    </BaseSection>
+
     <GradientBand>
       <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <BaseHeading
           eyebrow="The data"
           title="A useful robotics corpus has to preserve the body."
-          lead="Language datasets preserve words. Vision datasets preserve pixels. Robotics datasets need the coupled record of movement, environment, task progress, and human timing."
+          lead="Text and image datasets already exist at scale; the physical record does not. A robotics corpus has to preserve the coupled signal a body produces at work — movement, environment, task progress, and human timing."
         />
 
         <BaseGrid :columns="3" gap="md">
@@ -174,16 +212,24 @@ useScrollReveal()
     </GradientBand>
 
     <BaseSection
+      eyebrow="Inside a session"
+      title="Exactly what a session gives you."
+      lead="Every capture is a synchronized bundle — sampled fast, stored at working rates, one clock across streams. This is the raw material your models would train on."
+    >
+      <SessionSpec />
+    </BaseSection>
+
+    <BaseSection
       eyebrow="Research areas"
       title="The first use cases are practical, physical, and cooperative."
       lead="The WELL is most valuable where robots need to work around people, tools, space, and changing context rather than clean benchmark scenes."
     >
       <div class="grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
         <MediaFrame
-          src="/media/trace-mmt-board-render.jpg"
-          alt="TRACE multimodal module board render"
+          src="/media/trace-mmt-render.jpg"
+          alt="The TRACE MMT — exploded view, size next to a quarter, and cap, headband, chest, and helmet mounts"
           eyebrow="Capture hardware"
-          caption="The MMT core anchors scene and task capture while body sensors add motion fidelity."
+          caption="The MMT core anchors scene and task capture; the body-worn LMT swarm adds motion fidelity."
           aspect="wide"
         />
 
@@ -201,7 +247,7 @@ useScrollReveal()
 
     <BaseSection
       eyebrow="Access path"
-      title="Research access starts with fit, not a generic download."
+      title="Research access starts with fit."
       lead="TRACE matches access to the work being done. That keeps early research useful while respecting contributor accounting, consent boundaries, and deployment licensing."
       tone="soft"
     >
@@ -247,7 +293,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Questions"
       title="The research path should stay precise."
-      lead="The goal is not to promise a magic robotics dataset. The goal is to build a practical, governed corpus that makes hard physical behavior easier to study."
+      lead="A practical, honest corpus that makes hard physical behavior easier to study."
     >
       <BaseGrid :columns="3" gap="lg">
         <BaseCard
@@ -262,7 +308,7 @@ useScrollReveal()
 
     <CtaPanel
       eyebrow="Research access"
-      title="Start with the task data your team actually needs."
+      title="Start with the task data your team needs."
       lead="Tell TRACE what you are studying, which task categories matter, and whether the work is research-only, pre-revenue, or moving toward deployment."
       primary-label="Request research access"
       primary-to="/request-access?path=researcher"

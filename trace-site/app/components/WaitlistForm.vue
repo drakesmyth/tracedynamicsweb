@@ -46,6 +46,16 @@ const pathOptions: Array<{
     label: 'Contributor onboarding',
     detail: 'Real-world capture work, validation, and session credit.',
   },
+  {
+    value: 'industry',
+    label: 'Industry & licensing',
+    detail: 'Commercial licensing, deployment, and partnership inquiries.',
+  },
+  {
+    value: 'media',
+    label: 'Media & press',
+    detail: 'Press, interviews, and background on TRACE and the WELL.',
+  },
 ]
 
 const form = reactive<{
@@ -261,7 +271,7 @@ const resetRequest = () => {
     </div>
 
     <p class="mt-4 text-sm leading-6 text-trace-muted">
-      Sends to the TRACE intake endpoint. CRM delivery is the next integration.
+      Your request goes straight to the TRACE team, who follow up about next steps.
     </p>
 
     <div
@@ -287,8 +297,8 @@ const resetRequest = () => {
         Thanks, {{ displayName }}.
       </p>
       <p class="mt-2 text-sm leading-6 text-trace-muted">
-        Your {{ selectedPath.label.toLowerCase() }} request was accepted by the
-        TRACE intake endpoint. Reference {{ requestId }}.
+        Your {{ selectedPath.label.toLowerCase() }} request is in. We'll follow up
+        as access opens — keep an eye on your inbox. Reference {{ requestId }}.
       </p>
     </div>
   </form>

@@ -2,13 +2,13 @@
 const configRows = [
   {
     axis: 'MMT core',
-    range: 'V3.5 / V4',
+    range: 'Gen3 / Gen4',
     detail:
-      'Chest- or head-mounted scene sensing: wide RGB, depth, audio, barometric anchor, and motion.',
+      'Chest- or head-mounted scene sensing: wide RGB, depth mapping, audio, barometric anchor, and motion. Gen4 (Q2 2027) adds higher-resolution scene capture and true depth imaging.',
   },
   {
     axis: 'Body swarm',
-    range: '6-20 sensors',
+    range: '6–20 sensors',
     detail:
       'Pose and motion fidelity for how a person moves, works, and shares space with others.',
   },
@@ -16,7 +16,7 @@ const configRows = [
     axis: 'Baseline kit',
     range: '~$200 target',
     detail:
-      'V3.5-class core plus six to eight sensors; higher configurations scale with sensor count and MMT version.',
+      'Gen3-class core plus six to eight body sensors; higher configurations scale with sensor count and MMT generation.',
   },
 ]
 </script>

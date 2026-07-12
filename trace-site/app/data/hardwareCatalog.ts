@@ -29,18 +29,18 @@ export const hardwareProducts: HardwareProduct[] = [
     title: 'Baseline Capture Kit',
     price: '~$200 target',
     status: 'Waitlist',
-    image: '/media/trace-mmt-board-render.jpg',
-    alt: 'TRACE MMT board render',
+    image: '/media/trace-mmt-render.jpg',
+    alt: 'TRACE MMT render — exploded view, size next to a quarter, and mounts',
     imageFit: 'contain',
     summary:
       'The starter path for contributors: one MMT core plus a six-to-eight sensor body swarm for eligible real-world sessions.',
     body: 'The baseline kit is the first complete contributor configuration TRACE needs to support. It pairs scene context with enough body motion fidelity to capture real tasks without a studio.',
-    includes: ['MMT V3.5-class core', '6-8 body sensors', 'Session capture path'],
+    includes: ['MMT Gen3-class core', '6-8 body sensors', 'Session capture path'],
     specs: [
       {
         label: 'Core',
-        value: 'MMT V3.5',
-        detail: 'Chest- or head-mounted scene, audio, depth, motion, and task context.',
+        value: 'MMT Gen3',
+        detail: 'Chest- or head-mounted scene sensing: wide RGB, depth mapping, audio, barometric anchor, and motion. Gen4 (Q2 2027) adds higher-resolution scene capture and true depth imaging.',
       },
       {
         label: 'Motion',
@@ -65,13 +65,13 @@ export const hardwareProducts: HardwareProduct[] = [
     title: 'MMT Module',
     price: 'Pricing TBD',
     status: 'Prototype',
-    image: '/media/trace-hardware-field-photo.jpeg?v=2',
-    alt: 'TRACE prototype hardware board with camera and storage connections',
+    image: '/media/trace-mmt-render.jpg',
+    alt: 'TRACE MMT render — housing, sensor board, and wearable mounts',
     imageFit: 'contain',
     summary:
-      'The scene and task anchor for TRACE capture: wide RGB, depth, audio, barometric context, motion, and local storage.',
+      'The scene and task anchor for TRACE capture: wide RGB, depth mapping, audio, barometric context, motion, and local storage. Gen4 (Q2 2027) adds higher-resolution scene capture and true depth imaging.',
     body: 'Every TRACE kit starts with the MMT. It gives body-sensor streams a real-world frame of reference: what the contributor was doing, what tools were present, and how the workspace changed.',
-    includes: ['Scene capture', 'Audio and depth ready', 'Storage and sync'],
+    includes: ['Scene capture', 'Audio and depth mapping ready', 'Storage and sync'],
     specs: [
       {
         label: 'Role',

@@ -7,24 +7,43 @@ useSeoMeta({
 
 const heroStats = [
   {
-    value: 'MMT',
-    label: 'core unit',
-    detail: 'Chest- or head-mounted multimodal scene capture.',
+    value: '15–25 cm',
+    label: 'the gap we close',
+    detail: 'How far video-estimated pose drifts from measured ground truth per joint. TRACE measures kinematics directly.',
   },
   {
-    value: '6-20',
+    value: '6 PB+',
+    label: 'per million hours',
+    detail: 'Synchronized video, depth mapping, audio, and measured kinematics on Gen3 — roughly 10× that on Gen4.',
+  },
+  {
+    value: '6–20',
     label: 'body sensors',
-    detail: 'Millisecond-synced pose and motion fidelity.',
+    detail: 'A body-worn swarm for full-body pose, synchronized to the millisecond.',
   },
   {
-    value: '7/7',
-    label: 'device harvest',
-    detail: 'Field-tested swarm collection and upload workflow.',
+    value: '~$200',
+    label: 'baseline kit',
+    detail: 'Deliberately commodity parts, sourced and built almost anywhere electronics are made.',
+  },
+]
+
+const capabilities = [
+  {
+    title: 'Measured',
+    body: 'Body motion read straight from the sensors you wear, at the source.',
   },
   {
-    value: 'Early',
-    label: 'research path',
-    detail: 'Fit-first access for research and pre-revenue development.',
+    title: 'In the wild',
+    body: 'Real work in real spaces, not staged lab sets or mocap studios.',
+  },
+  {
+    title: 'Multimodal',
+    body: 'Motion, depth mapping, video, and audio, synchronized to the millisecond.',
+  },
+  {
+    title: 'Open',
+    body: 'Free for research, licensed for commercial — an open corpus anyone can build on.',
   },
 ]
 
@@ -50,7 +69,7 @@ const whyNowCards = [
   {
     eyebrow: 'Capital',
     title: 'The money arrived.',
-    body: 'Humanoid robotics is funded like a platform shift, but hardware alone does not teach robots how people actually work.',
+    body: 'Humanoid robotics is funded like a platform shift, but hardware alone does not teach robots how people work.',
   },
   {
     eyebrow: 'Data',
@@ -58,32 +77,9 @@ const whyNowCards = [
     body: 'Across language and vision, more real-world data beat cleverer architectures again and again.',
   },
   {
-    eyebrow: 'Sensors',
-    title: 'The parts got cheap.',
-    body: 'Industrial-grade motion sensors, radios, depth cameras, and batteries are now commodity parts.',
-  },
-]
-
-const workflowSteps = [
-  {
-    eyebrow: '01',
-    title: 'Wear the kit',
-    body: 'A light multimodal core pairs with a small body-sensor swarm for pose, motion, audio, and environment capture.',
-  },
-  {
-    eyebrow: '02',
-    title: 'Record real work',
-    body: 'Contributors capture ordinary sessions in real spaces, not staged lab sets or narrow mocap studio routines.',
-  },
-  {
-    eyebrow: '03',
-    title: 'Verify and govern',
-    body: 'Sessions pass quality, consent, sync, and metadata checks before they become useful dataset inventory.',
-  },
-  {
-    eyebrow: '04',
-    title: 'License the WELL',
-    body: 'Researchers and builders access governed data, while contributors retain a stake in the value they create.',
+    eyebrow: 'Hardware',
+    title: 'The robots are here.',
+    body: 'Humanoid chassis with increasingly capable manipulation and locomotion are now built by a wide range of manufacturers. The bodies exist; the training data does not.',
   },
 ]
 
@@ -125,10 +121,18 @@ const audienceCards = [
     tone: 'plain' as const,
     eyebrow: 'Researchers',
     title: 'Build on data that cannot be scraped.',
-    body: 'The WELL gives embodied AI researchers a governed path toward physical-world behavior data, not another synthetic benchmark.',
+    body: 'The WELL gives embodied AI researchers real physical-world behavior data to build on.',
     to: '/request-access?path=researcher',
     label: 'Request access',
   },
+]
+
+const wornStrip = [
+  { src: '/media/trace-work-construction.jpg', label: 'Trades & construction', alt: 'A person wearing the TRACE kit walking through a construction site' },
+  { src: '/media/trace-work-reach.jpg', label: 'Stocking & picking', alt: 'A person wearing the TRACE kit reaching for a box on a warehouse shelf' },
+  { src: '/media/trace-work-lifting.jpg', label: 'Lifting & moving', alt: 'A person wearing the TRACE kit lifting a box from a pallet in a warehouse' },
+  { src: '/media/trace-work-diy.jpg', label: 'Repair & assembly', alt: 'A person wearing the TRACE kit drilling at a home workbench' },
+  { src: '/media/trace-work-home.jpg', label: 'Home & everyday', alt: 'A person wearing the TRACE kit tidying toys into a basket at home' },
 ]
 
 useScrollReveal()
@@ -139,7 +143,7 @@ useScrollReveal()
     <HeroSection
       eyebrow="The missing data layer for embodied AI"
       title="Robots have bodies. They do not have experience."
-      lead="TRACE records how people actually move, work, and cooperate in real spaces: the synchronized motion, depth, video, and audio data the next generation of robots needs and no one can scrape."
+      lead="TRACE records how people move, work, and cooperate in real spaces: the synchronized motion, depth mapping, video, and audio data the next generation of robots needs and no one can scrape."
     >
       <template #actions>
         <BaseButton to="/request-access?path=contributor">
@@ -154,22 +158,32 @@ useScrollReveal()
         <figure
           class="trace-card w-full max-w-xl rounded-trace border border-trace-line p-3 shadow-glow"
         >
-          <div class="aspect-[16/10] overflow-hidden rounded-[6px] bg-trace-ink">
+          <div class="aspect-[4/5] overflow-hidden rounded-[6px] bg-trace-ink">
             <img
-              src="/media/trace-mmt-board-render.jpg"
-              alt="TRACE MMT board render"
-              class="h-full w-full object-contain"
+              src="/media/trace-hero.jpg"
+              alt="A construction worker in a hard hat wearing the full TRACE kit — MMT on the helmet and chest, LMT motion sensors on arms, belt, and legs — walking a job site with blueprints"
+              class="h-full w-full object-cover"
               loading="eager"
             >
           </div>
           <figcaption class="grid gap-3 px-1 py-4 sm:grid-cols-3">
-            <BasePill tone="blue">Hardware</BasePill>
-            <BasePill tone="cyan">Sensor sync</BasePill>
-            <BasePill tone="green">Field data</BasePill>
+            <BasePill tone="blue">Real work</BasePill>
+            <BasePill tone="cyan">In the wild</BasePill>
+            <BasePill tone="green">Low-profile</BasePill>
           </figcaption>
         </figure>
       </template>
     </HeroSection>
+
+    <BaseSection
+      eyebrow="The difference"
+      title="Video guesses where your body is. We measure it."
+      lead="Pose inferred from video drifts 15–25 cm per joint. TRACE reads body motion directly from worn sensors, so the record sits where the movement actually happened."
+    >
+      <div class="mx-auto max-w-2xl">
+        <AccuracyContrast />
+      </div>
+    </BaseSection>
 
     <BaseSection>
       <BaseGrid :columns="4" gap="sm">
@@ -181,6 +195,23 @@ useScrollReveal()
           :detail="item.detail"
         />
       </BaseGrid>
+    </BaseSection>
+
+    <BaseSection
+      eyebrow="What makes it different"
+      title="Measured. In the wild. Multimodal. Open."
+    >
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div v-for="item in capabilities" :key="item.title" data-reveal>
+          <div class="h-1 w-10 rounded-full" style="background: var(--trace-brand-gradient)" />
+          <h3 class="mt-4 font-display text-xl font-semibold text-trace-ink">
+            {{ item.title }}
+          </h3>
+          <p class="mt-2 text-sm leading-6 text-trace-muted">
+            {{ item.body }}
+          </p>
+        </div>
+      </div>
     </BaseSection>
 
     <GradientBand>
@@ -206,7 +237,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Why now"
       title="Three things became true at once."
-      lead="The robotics market is moving, the AI playbook is obvious, and the capture hardware is finally cheap enough to scale outside the lab."
+      lead="Capital is treating humanoid robotics as a platform shift, the data lesson from language and vision is settled, and capable robot chassis are finally shipping from a wide range of makers."
     >
       <BaseGrid :columns="3" gap="lg">
         <BaseCard
@@ -227,10 +258,10 @@ useScrollReveal()
       <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <ProductConfigPanel />
         <MediaFrame
-          src="/media/trace-hardware-field-photo.jpeg?v=2"
-          alt="TRACE hardware board with sensor connections"
-          eyebrow="Built hardware"
-          caption="Prototype capture hardware with real sensor, storage, power, and camera connections."
+          src="/media/trace-mmt-render.jpg"
+          alt="The TRACE MMT — exploded view of housing and sensor board, side profile next to a quarter for scale, and chest, headband, cap, and helmet mounts"
+          eyebrow="The MMT"
+          caption="The multimodal core: wide RGB, depth, audio, barometric, and motion — small enough to wear on a cap, chest, or helmet."
           fit="contain"
           aspect="wide"
         />
@@ -240,20 +271,37 @@ useScrollReveal()
     <BaseSection
       eyebrow="How it works"
       title="Ordinary work becomes training data."
-      lead="The network path is intentionally simple: people capture eligible sessions, TRACE validates the data products, and the WELL becomes a governed corpus for behavior models."
+      lead="The path is direct: people capture eligible sessions, TRACE validates them, and the WELL becomes the corpus behavior models train on."
       tone="soft"
     >
       <DataNetworkFlow />
-      <AnimatedDivider />
-      <BaseGrid :columns="4" gap="md">
-        <BaseCard
-          v-for="item in workflowSteps"
-          :key="item.title"
-          :eyebrow="item.eyebrow"
-          :title="item.title"
-          :body="item.body"
-        />
-      </BaseGrid>
+    </BaseSection>
+
+    <BaseSection
+      eyebrow="Worn during real work"
+      title="One kit, every kind of work."
+      lead="The same light rig rides along through lifting, reaching, assembly, and everything in between — capturing how people move on the job."
+    >
+      <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <figure
+          v-for="shot in wornStrip"
+          :key="shot.src"
+          class="overflow-hidden rounded-trace border border-trace-line shadow-soft"
+          data-reveal
+        >
+          <div class="aspect-[3/4] overflow-hidden bg-trace-ink">
+            <img
+              :src="shot.src"
+              :alt="shot.alt"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+          <figcaption class="bg-white px-3 py-2 text-sm font-semibold text-trace-ink">
+            {{ shot.label }}
+          </figcaption>
+        </figure>
+      </div>
     </BaseSection>
 
     <section class="bg-trace-ink py-16 text-white sm:py-20">
@@ -306,17 +354,18 @@ useScrollReveal()
 
         <div class="grid gap-5">
           <MediaFrame
-            src="/media/trace-swarm-dashboard.jpg"
-            alt="TRACE swarm status dashboard showing seven devices harvested"
-            eyebrow="Pipeline"
-            caption="Swarm collection dashboard showing completed harvest across seven devices."
+            src="/media/trace-hardware-boards.jpg"
+            alt="The built TRACE hardware — the MMT board with camera, sensors, storage, and radio, and two LMT motion-sensor boards"
+            eyebrow="The hardware"
+            caption="The MMT and LMT boards — camera, motion sensors, storage, and radio — built and field-tested today."
             aspect="wide"
           />
-          <BaseCard
-            tone="brand"
-            eyebrow="Pipeline"
-            title="Raw capture becomes governed inventory."
-            body="The processing path is designed for validation, grading, labeling, accounting, and access control before data is used downstream."
+          <MediaFrame
+            src="/media/trace-hardware-lmt.jpg"
+            alt="A single TRACE LMT motion-sensor board next to a pen for scale"
+            eyebrow="Actual size"
+            caption="One LMT motion sensor next to a pen — a finished board, small enough to wear anywhere."
+            aspect="wide"
           />
         </div>
       </div>
@@ -325,7 +374,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="Validation"
       title="Governance starts before data earns credit."
-      lead="The public story should be honest: real-world capture brings privacy, consent, and quality risk. TRACE handles that through capture modes, contributor guidance, and validation gates."
+      lead="Real-world capture carries privacy, consent, and quality risk. TRACE handles that through capture modes, contributor guidance, and validation gates before any session earns credit."
       tone="soft"
     >
       <BaseGrid :columns="3" gap="lg">
@@ -344,7 +393,7 @@ useScrollReveal()
         <BaseHeading
           eyebrow="Who it is for"
           title="Contributors create the corpus. Researchers build with it."
-          lead="TRACE has two primary audiences on the public site. The homepage should make both paths obvious without splitting the story too early."
+          lead="Contributors turn everyday work into verified training data; researchers build on real behavior no one else has. Both start from the same access path."
         />
 
         <BaseGrid :columns="2" gap="lg">
@@ -369,7 +418,7 @@ useScrollReveal()
     <CtaPanel
       eyebrow="Join the build"
       title="Help create the data layer robots cannot scrape."
-      lead="TRACE is building a practical path from real human work to governed embodied-AI training data. Contributors, researchers, and builders can plug into the system as it scales."
+      lead="TRACE is building a practical path from real human work to training data for embodied AI. Contributors, researchers, and builders can plug into the system as it scales."
       primary-label="Request access"
       primary-to="/request-access"
       secondary-label="Research access"

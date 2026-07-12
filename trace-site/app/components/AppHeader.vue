@@ -37,7 +37,7 @@ const closeMenu = () => {
         </nav>
 
         <div class="hidden items-center gap-3 md:flex">
-          <BaseButton to="/request-access" size="sm">Join</BaseButton>
+          <BaseButton to="/request-access" size="sm">Request access</BaseButton>
         </div>
 
         <button

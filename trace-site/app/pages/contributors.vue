@@ -12,14 +12,14 @@ const contributorStats = [
     detail: 'Chest- or head-mounted scene and task sensing.',
   },
   {
-    value: '6-20',
+    value: '6–20',
     label: 'body sensors',
     detail: 'Configured by task, motion fidelity, and setting.',
   },
   {
     value: '~$200',
     label: 'baseline target',
-    detail: 'V3.5-class core plus six to eight sensors.',
+    detail: 'Gen3-class core plus six to eight body sensors.',
   },
   {
     value: 'Gated',
@@ -42,7 +42,7 @@ const captureSteps = [
   {
     eyebrow: '03',
     title: 'Capture real sessions',
-    body: 'Useful sessions come from real homes, shops, kitchens, benches, job sites, and workspaces rather than staged routines.',
+    body: 'Useful sessions come from real homes, shops, kitchens, benches, job sites, and workspaces — wherever the work already happens.',
   },
   {
     eyebrow: '04',
@@ -73,14 +73,14 @@ const ownershipCards = [
   {
     tone: 'brand' as const,
     eyebrow: 'Contributor share',
-    title: 'Validated hours participate in the upside.',
-    body: 'TRACE is designed so the people producing the dataset participate when commercial licensing creates value. Exact terms belong in onboarding, not vague marketing copy.',
+    title: 'Paid every time the data earns.',
+    body: 'Your share keeps paying. Every time the WELL is licensed, contributors are paid a share of that payment — and again on the next one, for as long as the data keeps earning. Exact terms are set during onboarding.',
   },
   {
     tone: 'plain' as const,
     eyebrow: 'Early network',
-    title: 'The first useful hours matter most.',
-    body: 'Early contributors help seed the dataset, prove the capture workflow, and establish the task categories future researchers and builders can use.',
+    title: 'The first hours are worth the most.',
+    body: 'The rate for each recorded hour starts at up to 64× and only falls toward a 1× baseline. Get in early — 30× or more is still on the table for the first public contributors — and every hour you bank holds that rate for as long as the data licenses.',
   },
 ]
 
@@ -100,8 +100,8 @@ useScrollReveal()
   <div>
     <HeroSection
       eyebrow="Contributors"
-      title="Turn real work into the data robots need."
-      lead="TRACE is opening an early contributor path for people who can capture useful physical work with lightweight sensor hardware. Verified sessions help build the WELL: governed human task data for embodied AI."
+      title="Record your work once. Get paid as long as it earns."
+      lead="Capture the work you already do with a light sensor kit, and earn a share of the licensing revenue it generates — for as long as the data keeps earning. The earning rate is highest now and falls as the WELL grows, so the hours you bank early are worth the most, year after year. Kits ship to the first cohort first."
     >
       <template #actions>
         <BaseButton to="/request-access?path=contributor">
@@ -147,14 +147,14 @@ useScrollReveal()
     <BaseSection
       eyebrow="Eligible sessions"
       title="The first priority is useful, ordinary physical work."
-      lead="Strong contributor sessions show movement, tools, timing, proximity, and shared space. TRACE is especially interested in cooperative task data that is hard to synthesize or scrape."
+      lead="Strong contributor sessions show movement, tools, timing, proximity, and shared space. TRACE is especially interested in cooperative task data that can't be simulated or collected after the fact."
     >
       <div class="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <MediaFrame
-          src="/media/trace-hardware-field-photo.jpeg?v=2"
-          alt="TRACE prototype hardware with sensor and camera connections"
-          eyebrow="Field hardware"
-          caption="Prototype TRACE capture hardware connected during bench and field testing."
+          src="/media/trace-work-diy.jpg"
+          alt="A person wearing the TRACE kit while drilling at a workbench at home"
+          eyebrow="Ordinary work"
+          caption="A contributor captures a normal task — the kit records how they reach, hold, and work, wherever the work happens."
           aspect="wide"
         />
 
@@ -203,7 +203,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="The upside"
       title="The people who produce the data should participate in what it earns."
-      lead="TRACE is built around contributor alignment. Exact terms belong in onboarding, but the principle is simple: useful verified work should not disappear into someone else's dataset."
+      lead="TRACE is built around contributor alignment: the work you verify should not disappear into someone else's dataset. Exact terms are set during onboarding."
     >
       <BaseGrid :columns="2" gap="lg">
         <BaseCard
@@ -215,12 +215,43 @@ useScrollReveal()
           :body="item.body"
         />
       </BaseGrid>
+
+      <div
+        class="mt-8 grid items-center gap-8 rounded-trace border border-trace-line bg-white/70 p-6 shadow-soft lg:grid-cols-[auto_1fr]"
+        data-reveal
+      >
+        <EarningsCurve />
+        <div>
+          <p class="text-sm font-semibold uppercase text-trace-blue">
+            How the recurring share works
+          </p>
+          <ol class="mt-4 grid gap-3 text-sm leading-6 text-trace-muted">
+            <li>
+              <span class="font-semibold text-trace-ink">Your session is validated</span>
+              and enters the WELL.
+            </li>
+            <li>
+              <span class="font-semibold text-trace-ink">Each time it is licensed</span>,
+              you are paid a share of that payment.
+            </li>
+            <li>
+              <span class="font-semibold text-trace-ink">It pays again on the next license</span>
+              — for as long as the data keeps earning.
+            </li>
+          </ol>
+          <p class="mt-4 text-sm leading-6 text-trace-muted">
+            The multiplier only falls — up to 64× at the start, 30× or more for
+            early public contributors, toward 1× as the network matures. The hours
+            you bank early hold their rate for good.
+          </p>
+        </div>
+      </div>
     </BaseSection>
 
     <CtaPanel
       eyebrow="Start here"
-      title="Request contributor access for early hardware."
-      lead="Tell TRACE what you can capture, which settings you work in, and what kit configuration would make those sessions useful."
+      title="Get in while the rate is highest."
+      lead="The first cohort gets kits first, and every hour you bank early is worth more for good. Tell TRACE what you can capture and where you work to claim your place in line."
       primary-label="Request contributor access"
       primary-to="/request-access?path=contributor"
       secondary-label="Researcher path"

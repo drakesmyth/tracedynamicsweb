@@ -10,6 +10,8 @@ const accessPaths: RequestAccessPath[] = [
   'hardware',
   'researcher',
   'contributor',
+  'media',
+  'industry',
 ]
 
 const rateLimitWindowMs = 60_000
