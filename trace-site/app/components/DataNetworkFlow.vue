@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const flowSteps = [
-  'Person',
-  'Sensor kit',
-  'App',
+  'Task capture',
+  'Data review',
+  'Labeling & grading',
   'The WELL',
-  'Behavior models',
+  'Model training',
 ]
 </script>
 
