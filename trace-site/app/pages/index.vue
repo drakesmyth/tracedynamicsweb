@@ -217,7 +217,7 @@ useScrollReveal()
     <BaseSection
       eyebrow="How it works"
       title="Ordinary work becomes training data."
-      lead="The path is direct: people capture eligible sessions, TRACE validates them, and the WELL becomes the corpus behavior models train on."
+      lead="The path is direct: people record eligible sessions with fully instrumented, egocentric capture — what the wearer sees, plus how their body actually moves — TRACE validates them, and the WELL becomes the corpus behavior models train on."
       tone="soft"
     >
       <DataNetworkFlow />
