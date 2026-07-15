@@ -35,9 +35,9 @@ const dataCards = [
     body: 'Study how real people reach, pause, hand off, recover, share workspaces, and move through cluttered spaces.',
   },
   {
-    eyebrow: 'Context',
-    title: 'Scene and motion together.',
-    body: 'Pair first-person, 3D scene data with body-worn motion streams so policy work can connect intent, environment, and movement.',
+    eyebrow: 'Egocentric + instrumented',
+    title: 'Scene and body, both measured.',
+    body: 'Fully instrumented egocentric capture — a first-person 3D scene stream paired with body-worn sensors that measure pose directly, not pose inferred from the egocentric video after the fact.',
   },
   {
     eyebrow: 'Diversity',
@@ -107,7 +107,7 @@ const faqs = [
   {
     eyebrow: 'Synthetic data',
     title: 'Why not use simulation only?',
-    body: 'Simulation and video-estimated pose help, but benchmarked against marker-based capture, pose inferred from video drifts 15–25 cm per joint. Robots still need the measured record of human physical behavior: timing, hesitation, tool use, proximity, and adaptation.',
+    body: 'Simulation and video-estimated pose help, but most egocentric datasets are camera-only, with body pose inferred from the first-person video — and benchmarked against marker-based capture, that inferred pose drifts 15–25 cm per joint. TRACE is fully instrumented egocentric capture: the scene is recorded first-person and the body is measured directly, preserving the record robots need — timing, hesitation, tool use, proximity, and adaptation.',
   },
 ]
 

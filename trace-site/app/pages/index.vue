@@ -28,25 +28,6 @@ const heroStats = [
   },
 ]
 
-const capabilities = [
-  {
-    title: 'Measured',
-    body: 'Body motion read straight from the sensors you wear, at the source.',
-  },
-  {
-    title: 'In the wild',
-    body: 'Real work in real spaces, not staged lab sets or mocap studios.',
-  },
-  {
-    title: 'Multimodal',
-    body: 'Motion, depth mapping, video, and audio, synchronized to the millisecond.',
-  },
-  {
-    title: 'Open',
-    body: 'Free for research, licensed for commercial — an open corpus anyone can build on.',
-  },
-]
-
 const problemCards = [
   {
     eyebrow: 'Language',
@@ -142,7 +123,7 @@ useScrollReveal()
   <div>
     <HeroSection
       eyebrow="The missing data layer for embodied AI"
-      title="Robots have bodies. They do not have experience."
+      title="Robots are here. They need experience."
       lead="TRACE records how people move, work, and cooperate in real spaces: the synchronized motion, depth mapping, video, and audio data the next generation of robots needs and no one can scrape."
     >
       <template #actions>
@@ -177,7 +158,7 @@ useScrollReveal()
 
     <BaseSection
       eyebrow="The difference"
-      title="Video guesses where your body is. We measure it."
+      title="Measured motion data, not video pose estimates."
       lead="Pose inferred from video drifts 15–25 cm per joint. TRACE reads body motion directly from worn sensors, so the record sits where the movement actually happened."
     >
       <div class="mx-auto max-w-2xl">
@@ -195,23 +176,6 @@ useScrollReveal()
           :detail="item.detail"
         />
       </BaseGrid>
-    </BaseSection>
-
-    <BaseSection
-      eyebrow="What makes it different"
-      title="Measured. In the wild. Multimodal. Open."
-    >
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        <div v-for="item in capabilities" :key="item.title" data-reveal>
-          <div class="h-1 w-10 rounded-full" style="background: var(--trace-brand-gradient)" />
-          <h3 class="mt-4 font-display text-xl font-semibold text-trace-ink">
-            {{ item.title }}
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-trace-muted">
-            {{ item.body }}
-          </p>
-        </div>
-      </div>
     </BaseSection>
 
     <GradientBand>
@@ -251,27 +215,9 @@ useScrollReveal()
     </BaseSection>
 
     <BaseSection
-      eyebrow="The product"
-      title="One core unit. Motion fidelity you scale."
-      lead="Every kit is built around the MMT, then configured with a body-worn sensor swarm. The result is synchronized scene context and full-body motion without a studio."
-    >
-      <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <ProductConfigPanel />
-        <MediaFrame
-          src="/media/trace-mmt-render.jpg"
-          alt="The TRACE MMT — exploded view of housing and sensor board, side profile next to a quarter for scale, and chest, headband, cap, and helmet mounts"
-          eyebrow="The MMT"
-          caption="The multimodal core: wide RGB, depth, audio, barometric, and motion — small enough to wear on a cap, chest, or helmet."
-          fit="contain"
-          aspect="wide"
-        />
-      </div>
-    </BaseSection>
-
-    <BaseSection
       eyebrow="How it works"
       title="Ordinary work becomes training data."
-      lead="The path is direct: people capture eligible sessions, TRACE validates them, and the WELL becomes the corpus behavior models train on."
+      lead="The path is direct: people record eligible sessions with fully instrumented, egocentric capture — what the wearer sees, plus how their body actually moves — TRACE validates them, and the WELL becomes the corpus behavior models train on."
       tone="soft"
     >
       <DataNetworkFlow />
