@@ -123,7 +123,7 @@ useScrollReveal()
   <div>
     <HeroSection
       eyebrow="The missing data layer for embodied AI"
-      title="Robots are here. They need experience."
+      title="Robots are real. They need real experience."
       lead="TRACE records how people move, work, and cooperate in real spaces: the synchronized motion, depth mapping, video, and audio data the next generation of robots needs and no one can scrape."
     >
       <template #actions>
@@ -200,7 +200,7 @@ useScrollReveal()
 
     <BaseSection
       eyebrow="Why now"
-      title="Three things became true at once."
+      title="Convergence."
       lead="Capital is treating humanoid robotics as a platform shift, the data lesson from language and vision is settled, and capable robot chassis are finally shipping from a wide range of makers."
     >
       <BaseGrid :columns="3" gap="lg">
