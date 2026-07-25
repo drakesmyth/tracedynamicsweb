@@ -307,10 +307,10 @@ useScrollReveal()
             aspect="wide"
           />
           <MediaFrame
-            src="/media/trace-hardware-lmt.jpg"
-            alt="A single TRACE LMT motion-sensor board next to a pen for scale"
-            eyebrow="Actual size"
-            caption="One LMT motion sensor next to a pen — a finished board, small enough to wear anywhere."
+            src="/media/trace-scope-band.jpg"
+            alt="The TRACE timing scope: a first-person context-camera frame above synchronized per-device motion and audio waveforms"
+            eyebrow="Real capture"
+            caption="A live session in the scope — first-person scene, audio, and full-body motion across seven devices, aligned on one master clock."
             aspect="wide"
           />
         </div>

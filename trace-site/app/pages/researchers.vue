@@ -147,10 +147,10 @@ useScrollReveal()
 
       <template #visual>
         <MediaFrame
-          src="/media/trace-swarm-dashboard.jpg"
-          alt="TRACE swarm dashboard for harvested sensor sessions"
-          eyebrow="Research pipeline"
-          caption="Early harvest tooling is designed to move synchronized sessions into validated dataset inventory."
+          src="/media/trace-orient-hero.jpg"
+          alt="Orientation overlay from one real TRACE session — the MMT and six body sensors, each device's orientation resolved on a common sphere"
+          eyebrow="Synchronized motion"
+          caption="One real session — the MMT and six body sensors, each device's orientation resolved and locked to a common clock."
           aspect="wide"
         />
       </template>
@@ -216,6 +216,24 @@ useScrollReveal()
       title="Exactly what a session gives you."
       lead="Every capture is a synchronized bundle — sampled fast, stored at working rates, one clock across streams. This is the raw material your models would train on."
     >
+      <div class="mx-auto mb-10 max-w-3xl" data-reveal>
+        <div
+          class="overflow-hidden rounded-trace border border-trace-line bg-trace-ink p-2 shadow-glow"
+        >
+          <img
+            src="/media/trace-scope-session.jpg"
+            alt="The TRACE scope showing one real session: a first-person context-camera frame, per-device motion and audio waveforms on a master-time axis, and orientation overlays for the MMT and six body sensors"
+            class="w-full rounded-[6px]"
+            loading="lazy"
+          >
+        </div>
+        <p class="mt-3 text-center text-sm text-trace-muted">
+          One real session in the TRACE scope — first-person scene, per-device
+          motion and audio, and full orientation for the MMT and six body
+          sensors, all aligned to a single master clock.
+        </p>
+      </div>
+
       <SessionSpec />
     </BaseSection>
 
