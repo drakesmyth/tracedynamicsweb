@@ -18,6 +18,11 @@ export const progressGenerations: ProgressGeneration[] = [
     label: 'Second generation · V2 / V3.5',
     entries: [
       {
+        date: '2026-07-25',
+        title: 'Data-quality analysis begins',
+        body: 'With swarm capture proven, the work turns to verifying it. Custom tooling now checks the critical capture metrics — cross-device time alignment, stream coverage, and sensor agreement — so every session can be validated before it counts.',
+      },
+      {
         date: '2026-07-08',
         title: 'Swarm testing begins',
         body: 'The second-generation kit enters multi-device swarm testing, with body sensors running the production-candidate board — the start of the final major phase before the hardware is ready for contributors.',
